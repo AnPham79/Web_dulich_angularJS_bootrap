@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet"
+            href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
+    <body class>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid py-3">
+                    <a class="navbar-brand fw-bold fs-2" href="#"><i
+                            class='bx bx-film'></i>CINEMA</a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    aria-current="page"
+                                    href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Phim
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="#">Phim hành động</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Phim mới</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Phim hot</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Sắp chiếu</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Giới
+                                    thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên
+                                    hệ</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item nav-item-primary">
+                                <a class="nav-link" href="#">Đăng
+                                    nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tham Gia
+                                    CINEMA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="banner-1 col-lg-8 mx-auto">
+                    <div id="carouselExampleRide" class="carousel slide"
+                        data-bs-ride="true">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active rounded">
+                                <img
+                                    src="./asset/img/Avengers-Infinity-War-ELLE-Man-featured-01-01.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="./asset/img/poster-phim-hanh-dong.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="./asset/img/poster-phim-kinh-di.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleRide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleRide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="banner-2 col-lg-4 mx-auto d-none d-md-block">
+                    <div class="row mt-lg-0 mt-3">
+                        <div class="col-lg-12 col-md-12 col-sm-6 w-100">
+                            <img class="w-100 rounded"
+                                src="./asset/img/poster-phim-hanh-dong.jpg" alt>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 w-100 mt-3">
+                            <img class="w-100 rounded"
+                                src="./asset/img/poster-phim-kinh-di.jpg" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu bg-white p-3 rounded shadow mt-3">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                            <label for="phim" class="form-label">Chọn
+                                Phim</label>
+                            <select class="form-select" id="phim">
+                                <option selected>KungFu Panda4</option>
+                                <option>Quỷ thây đầu</option>
+                                <option>Bà thím báo thù</option>
+                                <option>Dune: Hành Tinh Cát 2</option>
+                                <option>Mai</option>
+                                <option>Tiếng yêu không lời</option>
+                                <option>Quý cô thừa kế</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                            <label for="ngaychieu" class="form-label">Ngày
+                                chiếu</label>
+                            <select class="form-select" id="ngaychieu">
+                                <option selected>8/3/2024</option>
+                                <option>9/3/2024</option>
+                                <option>10/3/2024</option>
+                                <option>11/3/2024</option>
+                                <option>12/3/2024</option>
+                                <option>13/3/2024</option>
+                                <option>14/3/2024</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                            <label for="xuatchieu" class="form-label">Xuất
+                                chiếu</label>
+                            <select class="form-select" id="xuatchieu">
+                                <option selected>17:00</option>
+                                <option>17:45</option>
+                                <option>18:30</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <button class="btn btn-warning w-100 mt-4">
+                                <a href="#"
+                                    class="text-decoration-none text-white">Kiểm
+                                    tra ngay</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <h2 class="mt-5">Đang chiếu</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/marita-500_1709276827076.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Marita: Vong Nữ Đoạt Hồn</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/500_1709025551999.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Bà thím báo thù</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/baghead-500_1708317004756.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Quỷ thây đầu</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/dune-2-500_1708588988385.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Dune: Hành Tinh Cát - Phần Hai</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/kungfu-panda-4-500_1708659195441.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">KungFu Panda 4</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/mai-500_1707105158298.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Mai</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/tieng-yeu-khong-loi-500_1709869385632.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Tiếng yêu không lời</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bxs-film'></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Quý cô thừa kế 2</h5>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button
+                    class="mt-4 btn btn-warning bg-transparent class-view-more text-warning d-flex align-items-center">
+                    <a href class="text-decoration-none text-warning">Xem
+                        thêm</a>
+                </button>
+            </div>
+            <div class="trailer-video position-relative w-100 mb-5">
+                <div class="row m-5 pt-5">
+                    <h5 class="text-dark mb-5">Trailer film sắp ra mắt</h5>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <iframe class="w-100"
+                            src="https://www.youtube.com/embed/Z4KJNT9AwT8?si=usIl6r2MrnuohTk_"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <span class="text-dark">The Nun</span>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <iframe class="w-100"
+                            src="https://www.youtube.com/embed/ref2m2Sx-ks?si=s5laBnboOIU4pfyP"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <span class="text-dark">Shogun 2024</span>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <iframe class="w-100"
+                            src="https://www.youtube.com/embed/EX6clvId19s?si=meNeJQ8mWljFjzbU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <span class="text-dark">Mai Trấn Thành</span>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <iframe class="w-100"
+                            src="https://www.youtube.com/embed/ByAn8DF8Ykk?si=MFj2I-lQk_ad3ZmH"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <span class="text-dark">Nguyên tố sư cuối cùng
+                            NF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="voucher-content col-lg-6 col-md-12 col-sm-12">
+                    <h2>Đặt Vé Online - Không Lo Trễ Nải - Voucher liền tay</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae deleniti omnis accusamus maxime blanditiis est
+                        ducimus dolor adipisci? Consequatur laboriosam, nobis
+                        vero amet officiis accusamus sunt deserunt minima eos
+                        at.
+                        Esse, soluta dolorem! Dolores facere debitis quia, quo
+                        atque libero neque deserunt odio rem molestiae fugiat
+                        voluptate alias maxime blanditiis exercitationem ipsa
+                        nam ipsum possimus cumque culpa id! Consequuntur,
+                        dolor.</p>
+                    <button class="btn-voucher btn btn-warning"><a href
+                            class="text-decoration-none text-white">Mua ngay<i
+                                class='bx bx-right-arrow-alt'></i></a></button>
+                </div>
+                <div class="voucher-img col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                    <img src="./asset/img/u22-496x267.png" alt="" class="mt-lg-0 mt-5">
+                </div>                
+            </div>
+        </div>
+        <script
+            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
