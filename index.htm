@@ -4,18 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
         <link rel="stylesheet"
             href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
             rel='stylesheet'>
     </head>
-    <body class>
+    <body>
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid py-3">
-                    <a class="navbar-brand fw-bold fs-2" href="#"><i
-                            class='bx bx-film'></i>CINEMA</a>
+                    <a class="navbar-brand fw-bold fs-2" href="#">
+                        <i class='bx bxs-tree'></i>TRAVEL</a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -37,17 +37,17 @@
                                     href="#"
                                     role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    Phim
+                                    Tour
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item"
-                                            href="#">Phim hành động</a></li>
+                                            href="#">Du lịch Miền Bắc</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Phim mới</a></li>
+                                            href="#">Du lịch nước ngoài</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Phim hot</a></li>
+                                            href="#">Du lịch miền trung</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Sắp chiếu</a></li>
+                                            href="#">Du lịch miền nam</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -66,7 +66,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Tham Gia
-                                    CINEMA</a>
+                                    The TRAVEL</a>
                             </li>
                         </ul>
                     </div>
@@ -79,15 +79,15 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active rounded">
                                 <img
-                                    src="./asset/img/Avengers-Infinity-War-ELLE-Man-featured-01-01.jpg"
+                                    src="./asset/img/banner2.jpg"
+                                    class="d-block w-100 rounded" alt="...">
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="./asset/img/banner3.jpg"
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item rounded">
-                                <img src="./asset/img/poster-phim-hanh-dong.jpg"
-                                    class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item rounded">
-                                <img src="./asset/img/poster-phim-kinh-di.jpg"
+                                <img src="./asset/img/bnaner1.jpg"
                                     class="d-block w-100" alt="...">
                             </div>
                         </div>
@@ -111,11 +111,11 @@
                     <div class="row mt-lg-0 mt-3">
                         <div class="col-lg-12 col-md-12 col-sm-6 w-100">
                             <img class="w-100 rounded"
-                                src="./asset/img/poster-phim-hanh-dong.jpg" alt>
+                                src="./asset/img/banner3.jpg" alt class="rounded">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-6 w-100 mt-3">
                             <img class="w-100 rounded"
-                                src="./asset/img/poster-phim-kinh-di.jpg" alt>
+                                src="./asset/img/bnaner1.jpg" alt class="rounded">
                         </div>
                     </div>
                 </div>
@@ -124,40 +124,31 @@
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
-                            <label for="phim" class="form-label">Chọn
-                                Phim</label>
+                            <label for="phim" class="form-label">Địa điểm</label>
                             <select class="form-select" id="phim">
-                                <option selected>KungFu Panda4</option>
-                                <option>Quỷ thây đầu</option>
-                                <option>Bà thím báo thù</option>
-                                <option>Dune: Hành Tinh Cát 2</option>
-                                <option>Mai</option>
-                                <option>Tiếng yêu không lời</option>
-                                <option>Quý cô thừa kế</option>
+                                <option selected>Du lịch Nha Trang</option>
+                                <option>Du lịch Đà Nẵng</option>
+                                <option>Du lịch Indo</option>
+                                <option>Du lịch Lào</option>
+                                <option>Du lịch Du lịch Huế</option>
+                                <option>Du lịch Phan Thiết</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
-                            <label for="ngaychieu" class="form-label">Ngày
-                                chiếu</label>
+                            <label for="ngaychieu" class="form-label">Khuyến mãi</label>
                             <select class="form-select" id="ngaychieu">
-                                <option selected>8/3/2024</option>
-                                <option>9/3/2024</option>
-                                <option>10/3/2024</option>
-                                <option>11/3/2024</option>
-                                <option>12/3/2024</option>
-                                <option>13/3/2024</option>
-                                <option>14/3/2024</option>
+                                <option selected>Khuyến mãi</option>
+                                <option>Không</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
-                            <label for="xuatchieu" class="form-label">Xuất
-                                chiếu</label>
+                            <label for="xuatchieu" class="form-label">Tour</label>
                             <select class="form-select" id="xuatchieu">
-                                <option selected>17:00</option>
-                                <option>17:45</option>
-                                <option>18:30</option>
-                                <option>19:00</option>
-                                <option>20:00</option>
+                                <option selected>Du lịch nước ngoài</option>
+                                <option>Du lịch miền Nam</option>
+                                <option>Du lịch miền Bắc</option>
+                                <option>Du lịch miền Trung</option>
+                                <option>Du lịch nước ngoài</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-sm-12">
@@ -171,7 +162,7 @@
                 </div>
             </nav>
 
-            <h2 class="mt-5">Đang chiếu</h2>
+            <h2 class="mt-5">Tour hot</h2>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -181,8 +172,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -193,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Marita: Vong Nữ Đoạt Hồn</h5>
+                    <h5 class="my-3">BALI (INDONESIA) - HÒN ĐẢO THIÊN ĐƯỜNG</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -203,8 +193,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -215,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Bà thím báo thù</h5>
+                    <h5 class="my-3">Ngắm hoàng hôn ở Vịnh Hạ Long</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -225,8 +214,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -237,7 +225,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Quỷ thây đầu</h5>
+                    <h5 class="my-3">Du lịch singapore</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -247,8 +235,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -259,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Dune: Hành Tinh Cát - Phần Hai</h5>
+                    <h5 class="my-3">Nghỉ dưỡng tại khu nghỉ dưởng samten</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -270,8 +257,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -282,7 +268,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">KungFu Panda 4</h5>
+                    <h5 class="my-3">Khám phá ngôi đền phật ở Ấn Độ</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -292,8 +278,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -304,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Mai</h5>
+                    <h5 class="my-3">Du lịch Đà Nẵng ngắm Cầu Rồng</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -315,8 +300,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -327,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Tiếng yêu không lời</h5>
+                    <h5 class="my-3">Ngắm hoa anh đào ở Nhật Bản</h5>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="image-container position-relative mt-3">
@@ -338,8 +322,7 @@
                             <div
                                 class="z-3 button position-absolute  top-50 start-50 translate-middle">
                                 <button class="btn btn-warning"><a href
-                                        class="text-decoration-none text-white"><i
-                                            class='bx bxs-film'></i>Xem
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
                                 <button
                                     class="btn bg-transparance border-warning mt-2"><a
@@ -350,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="my-3">Quý cô thừa kế 2</h5>
+                    <h5 class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</h5>
                 </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -362,64 +345,320 @@
             </div>
             <div class="trailer-video position-relative w-100 mb-5">
                 <div class="row m-5 pt-5">
-                    <h5 class="text-dark mb-5">Trailer film sắp ra mắt</h5>
+                    <h5 class="text-dark mb-5">Trailer du lịch sắp ra có</h5>
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <iframe class="w-100"
-                            src="https://www.youtube.com/embed/Z4KJNT9AwT8?si=usIl6r2MrnuohTk_"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <span class="text-dark">The Nun</span>
+                        <iframe class="w-100" src="https://www.youtube.com/embed/L7LXP2JV-hw?si=pbpGG5ZOfFPfjVto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span class="text-dark">Du lịch Nha Trang</span>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <iframe class="w-100"
-                            src="https://www.youtube.com/embed/ref2m2Sx-ks?si=s5laBnboOIU4pfyP"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <span class="text-dark">Shogun 2024</span>
+                        <iframe class="w-100" src="https://www.youtube.com/embed/L7LXP2JV-hw?si=pbpGG5ZOfFPfjVto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span class="text-dark">Du lịch Đà Nẵng</span>
+                    </div>                    
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <iframe class="w-100" src="https://www.youtube.com/embed/L7LXP2JV-hw?si=pbpGG5ZOfFPfjVto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span class="text-dark">Du lịch Ấn Độ</span>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <iframe class="w-100"
-                            src="https://www.youtube.com/embed/EX6clvId19s?si=meNeJQ8mWljFjzbU"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <span class="text-dark">Mai Trấn Thành</span>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <iframe class="w-100"
-                            src="https://www.youtube.com/embed/ByAn8DF8Ykk?si=MFj2I-lQk_ad3ZmH"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <span class="text-dark">Nguyên tố sư cuối cùng
-                            NF</span>
+                        <iframe class="w-100" src="https://www.youtube.com/embed/L7LXP2JV-hw?si=pbpGG5ZOfFPfjVto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span class="text-dark">Du lịch Trung Quốc</span>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="voucher-content col-lg-6 col-md-12 col-sm-12">
-                    <h2>Đặt Vé Online - Không Lo Trễ Nải - Voucher liền tay</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quae deleniti omnis accusamus maxime blanditiis est
-                        ducimus dolor adipisci? Consequatur laboriosam, nobis
-                        vero amet officiis accusamus sunt deserunt minima eos
-                        at.
-                        Esse, soluta dolorem! Dolores facere debitis quia, quo
-                        atque libero neque deserunt odio rem molestiae fugiat
-                        voluptate alias maxime blanditiis exercitationem ipsa
-                        nam ipsum possimus cumque culpa id! Consequuntur,
-                        dolor.</p>
-                    <button class="btn-voucher btn btn-warning"><a href
-                            class="text-decoration-none text-white">Mua ngay<i
-                                class='bx bx-right-arrow-alt'></i></a></button>
+            <div class="news mt-5">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
+                        <h3>Tin tức và sự kiện</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="./asset/prd/new1.jpg" alt="" class="w-100">
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="fw-bold">TPHCM ĐƯỢC VINH DANH "ĐIỂM ĐẾN DU LỊCH MICE HÀNG ĐẦU CHÂU Á"</p>
+                                <p>Tối 6-3, tại thành phố Berlin (Đức), diễn ra lễ trao Giải thưởng Du lịch MICE Thế giới năm 2023 (World MICE Awards). TPHCM được công nhận là "Điểm đến du lịch MICE hàng đầu châu Á năm 2023", đánh dấu năm thứ 4 liên tiếp TPHCM nhận được danh hiệu quý giá này.</p>
+                            </div>
+                        </div>
+                        <div class="news-more border-top border-warning pt-2 mt-4">
+                            <p class="fw-bold">LỮ HÀNH VIETLUXTOUR ĐỒNG HÀNH CÙNG DU KHÁCH THỰC HIỆN CAM KẾT ESG</p>
+                            <p>Với mục tiêu kinh doanh bền vững, Lữ Hành Vietluxtour đã triển khai chương trình cam kết ESG (Environment – môi trường, Social – xã hội và Governance – quản trị doanh nghiệp) và khuyến khích khách hàng cùng chung tay thực hiện. </p>
+                        </div>
+                        <div class="news-more border-top border-warning pt-2 mt-4">
+                            <p class="fw-bold">KHÁCH NƯỚC NGOÀI THÍCH THÚ VỚI TOUR 'TÂY ĂN TẾT TA'</p>
+                            <p>Với mục tiêu kinh doanh bền vững, Lữ Hành Vietluxtour đã triển khai chương trình cam kết ESG (Environment – môi trường, Social – xã hội và Governance – quản trị doanh nghiệp) và khuyến khích khách hàng cùng chung tay thực hiện. </p>
+                        </div>
+                        <button class="btn-news btn border-warning text-warning">Xem thêm<i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 mt-lg-0 mt-5">
+                        <h3>Cảm nhận của khách hàng</h3>
+                        <div class="row border-top pt-3 border-warning">
+                            <div class="col-lg-4">
+                                <img src="./asset/prd/new2.jpg" alt="" class="w-100">
+                            </div>
+                            <div class="col-lg-8">
+                                <small>
+                                    <p class="fw-bold">Chuyến đi teambuilding công ty IntES, tour Phan Thiết 15-17/9/2023</p>
+                                    <p>Tour Phan Thiết của Công ty IntES chuyến teambuilding cuối năm thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour.</p>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row border-top pt-3 border-warning">
+                            <div class="col-lg-4">
+                                <img src="./asset/prd/new3.jpg" alt="" class="w-100">
+                            </div>
+                            <div class="col-lg-8">
+                                <small>
+                                    <p class="fw-bold">Công ty Biotronik, Tour Miền Bắc 16-20/12/2023</p>
+                                    <p>Tour miền Bắc của Công ty Biotronik họp cuối năm&nbsp;thành công trên mong đợi, được ban quản lý&nbsp;gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour.</p>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row border-top pt-3 border-warning">
+                            <div class="col-lg-4">
+                                <img src="./asset/prd/new4.jpg" alt="" class="w-100">
+                            </div>
+                            <div class="col-lg-8">
+                                <small>
+                                    <p class="fw-bold">Công ty Cao su Thái Dương, Tour Miền Bắc 16-19/11/2023</p>
+                                    <p>Tour miền Bắc của Công ty Cao Su Thái Dương thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour.</p>
+                                </small>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
-                <div class="voucher-img col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
-                    <img src="./asset/img/u22-496x267.png" alt="" class="mt-lg-0 mt-5">
-                </div>                
+            </div>
+            <div class="review mt-5">
+                <h2 class="my-3">Góc lữ hành</h2>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="./asset/img/gocluhanh1.jpg" alt="" class="w-100 rounded">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="./asset/img/gocluhang2.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                                <img src="./asset/img/gocluhanh3.jpg" alt="" class="w-100 mt-2 rounded">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="./asset/img/gocluhang4.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                                <img src="./asset/img/gocluhang5.jpg" alt="" class="w-100 mt-2 rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mt-5">Tou nước ngoài</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/marita-500_1709276827076.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">BALI (INDONESIA) - HÒN ĐẢO THIÊN ĐƯỜNG</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/500_1709025551999.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Ngắm hoàng hôn ở Vịnh Hạ Long</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/baghead-500_1708317004756.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Du lịch singapore</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/dune-2-500_1708588988385.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Nghỉ dưỡng tại khu nghỉ dưởng samten</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/kungfu-panda-4-500_1708659195441.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Khám phá ngôi đền phật ở Ấn Độ</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./asset/prd/mai-500_1707105158298.jpg" alt
+                            class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Du lịch Đà Nẵng ngắm Cầu Rồng</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/tieng-yeu-khong-loi-500_1709869385632.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Ngắm hoa anh đào ở Nhật Bản</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="image-container position-relative mt-3">
+                        <img
+                            src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
+                            alt class="img-fluid rounded">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button
+                                    class="btn bg-transparance border-warning mt-2"><a
+                                        href
+                                        class="text-decoration-none text-white"><i
+                                            class='bx bx-play-circle'></i>Xem
+                                        trailer</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</h5>
+                </div>
             </div>
         </div>
+        <div class="footer mt-5 bg-dark text-white pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <a class="navbar-brand fw-bold fs-2 text-white" href="#">
+                            <i class='bx bxs-tree'></i>TRAVEL</a>
+                        <p>
+                            Chào mừng bạn đến với trang web du lịch, nơi bạn có thể khám phá những điểm đến tuyệt vời trên khắp thế giới và lập kế hoạch cho những cuộc phiêu lưu đáng nhớ.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <h5>Giới thiệu</h5>
+                        <p>Về chúng tôi</p>
+                        <p><i class='bx bx-chevron-right'></i>Thỏa thuận sử dụng</p>
+                        <p><i class='bx bx-chevron-right'></i>Quy chế hoạt động</p>
+                        <p><i class='bx bx-chevron-right'></i>Chính sách bảo mật</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <h5>Danh mục</h5>
+                        <p><i class='bx bx-chevron-right'></i>Du lịch miền Bắc</p>
+                        <p><i class='bx bx-chevron-right'></i>Du lịch miền Trung</p>
+                        <p><i class='bx bx-chevron-right'></i>Du lịch miền Nam</p>
+                        <p><i class='bx bx-chevron-right'></i>Du lịch nước ngoài</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <h5>Hỗ trợ</h5>
+                        <p><i class='bx bx-chevron-right'></i>Góp ý</p>
+                        <p><i class='bx bx-chevron-right'></i>Sale & service</p>
+                        <p><i class='bx bx-chevron-right'></i>Rạp / giá vé</p>
+                        <p><i class='bx bx-chevron-right'></i>Tuyển dụng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container border-top py-2">
+                <p class="text-center mb-0"> <i class='bx bx-copyright'></i>
+                    Copyright and created by Phạm Ngọc Bảo An
+                </p>
+            </div>
+        </div>        
         <script
             src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>

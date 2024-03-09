@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+            href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <style>
+        html, body {
+            height: 100%;
+
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffffff, #6e6e6e);
+        }
+    </style>
+    </head>
+    <body class="h-100">
+        <div
+            class="container d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="card p-4">
+                    <div class="card-header">
+                        <img src="../asset/img/auth.png" class="w-100" alt="">
+                        Đăng kí
+                    </div>
+                    <div class="card-body">
+                        <form action="/login" method="post">
+                            <div class="form-group">
+                                <label for="name">Họ và tên:</label>
+                                <input type="name" id="name" name="name"
+                                    class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phonenumber">Số điện thoại:</label>
+                                <input type="phonenumber" id="phonenumber" name="phonenumber"
+                                    class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"
+                                    class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" id="password"
+                                        name="password" class="form-control"
+                                        required>
+                                    <div class="input-group-append">
+                                        <button
+                                            class="btn btn-outline-secondary"
+                                            type="button" id="togglePassword">
+                                            hiện
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="btn btn-warning mt-3 text-white w-100">Đăng kí
+                            </button>
+                            <p class="text-center pt-4">Bạn đã có tài khoản ?</p>
+                            <button type="submit"
+                                class="btn border-warning btn-transparence mt-3 text-white w-100"><a class="text-decoration-none text-warning" href="./login.html">Đăng nhập</a>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function() {
+            if (password.type === 'password') {
+                password.type = 'text';
+                togglePassword.textContent = 'Ẩn';
+            } else {
+                password.type = 'password';
+                togglePassword.textContent = 'Hiện';
+            }
+        });
+    </script>
+    </body>
+</html>
