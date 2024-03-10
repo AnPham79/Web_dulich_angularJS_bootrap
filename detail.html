@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
         <link rel="stylesheet"
             href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
@@ -37,17 +37,17 @@
                                     href="#"
                                     role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    Phim
+                                    Tour
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item"
-                                            href="#">Phim hành động</a></li>
+                                            href="#">Du lịch Miền Bắc</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Phim mới</a></li>
+                                            href="#">Du lịch nước ngoài</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Phim hot</a></li>
+                                            href="#">Du lịch miền trung</a></li>
                                     <li><a class="dropdown-item"
-                                            href="#">Sắp chiếu</a></li>
+                                            href="#">Du lịch miền nam</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -66,7 +66,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Tham Gia
-                                    CINEMA</a>
+                                    The TRAVEL</a>
                             </li>
                         </ul>
                     </div>
@@ -74,21 +74,61 @@
             </nav>
         </div>
         <div class="article-detail">
-            <div class="banner-detail bg-black w-100 d-flex justify-content-center align-items-center overflow-hidden">
-                <img src="./asset/prd/marita-500_1709276827076.jpg" alt="" class="object-fit-cover">
-            </div>
+            <div class="banner-detail w-100 d-flex overflow-hidden">
+                <img src="./asset/img/banner-detail.png" alt="" class="w-100 object-fit-cover">
+            </div>            
             <div class="container">
                 <div class="product-detail">
                     <div class="row">
-                        <div class="img-prd-detail col-lg-6 col-md-6 col-sm-12">
-                            <img src="./asset/prd/marita-500_1709276827076.jpg" alt="" class="w-50 rounded">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <h1>Marita: Vong Nữ Đoạt Hồn</h1>
-                            <div class="time-and-day d-flex">
-                                <p><i class='bx bx-time'></i>107 p</p>
-                                <p><i class='bx bxs-calendar'></i>27/4/2024</p>
+                        <div class="img-prd-detail col-lg-4 col-md-12 col-sm-12">
+                            <div class="border p-4 mt-3 m-lg-0 m-5">
+                                <div class="text-center mb-4 hotline-detail">
+                                    <h4>MỌI THẮC MẮC XIN VUI LÒNG LIÊN HỆ</h4>
+                                    <p><i class='bx bxs-phone text-warning px-1'></i>Hotline: 0927 553 664</p>
+                                    <p><i class='bx bxs-envelope text-warning px-1'></i>Email: Anltweb79@gmail.com</p>
+                                </div>
+                                <h4 class="text-center">Hoặc là để lại thông tin</h4>
+                                <form>
+                                    <div class="form-group mt-3">
+                                        <label for="phoneInput" class="m-1">Số điện thoại</label>
+                                        <input type="tel" class="form-control" id="phoneInput" placeholder="Nhập số điện thoại">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="emailInput" class="m-1">Email</label>
+                                        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Nhập email">
+                                    </div>
+                                    <button type="submit" class="text-white btn btn-warning mt-3">Gửi</button>
+                                </form>
                             </div>
+                        </div>
+                        <div class="img-prd-detail col-lg-4 col-md-12 col-sm-12 mt-4">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <img src="./asset/prd/marita-500_1709276827076.jpg" alt="" class="w-100 rounded main-image">
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-12 d-flex">
+                                    <div class="col-lg-6 me-lg-1 mt-lg-1 col-md-6 me-md-1 mt-md-1 col-sm-6">
+                                        <img src="./asset/prd/trungquoc1.jpg" alt="" class="w-100 rounded my-1 thumbnail" onclick="showImage(this)">
+                                    </div>
+                                    <div class="col-lg-6 m-lg-1 col-md-6 m-md-1 col-sm-6">
+                                        <img src="./asset/prd/trungquoc2.jpg" alt="" class="w-100 rounded my-1 thumbnail" onclick="showImage(this)">
+                                    </div>
+                                    <div class="col-lg-6 m-lg-1 col-md-6 m-md-1 col-sm-6">
+                                        <img src="./asset/prd/trungquoc3.jpg" alt="" class="w-100 rounded my-1 thumbnail" onclick="showImage(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="icon-detail-prd col-lg-4 col-md-12 col-sm-12 mt-4">
+                            <h2 class="text-warning"><b>Tour du lịch trung quốc 2 ngày 1 đêm</b></h2>
+                            <p><i class='bx bx-money text-warning mx-2'></i>Giá: <b>7,990,000 đ</b></p>
+                            <p><i class='bx bx-barcode text-warning mx-2'></i>Mã: <b>TNA12364-29032024-SD</b></p>
+                            <p><i class='bx bxs-plane-take-off text-warning mx-2'></i>Khỏi hành: <b>29/03/2024</b></p>
+                            <p><i class='bx bxs-plane-land text-warning mx-2'></i>Ngày về: <b>01/04/2024</b></p>
+                            <p><i class='bx bx-time text-warning mx-2'></i>Thời gian: <b>2 ngày 1 đêm</b></p>
+                            <p><i class='bx bxs-map-pin text-warning mx-2'></i>Khởi hành từ: <b>TP.HCM</b></p>
+                            <p><i class='bx bxs-plane text-warning mx-2'></i>Phương tiện: <b>Máy bay</b></p>
+                            <button class="btn btn-warning text-white">Đặt ngay</button>
                         </div>
                     </div>
                 </div>
@@ -143,7 +183,21 @@
                 </p>
             </div>
         </div>
-        <script
-            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var images = ['./asset/prd/marita-500_1709276827076.jpg', './asset/prd/trungquoc1.jpg', './asset/prd/trungquoc2.jpg', './asset/prd/trungquoc3.jpg'];
+            var currentIndex = 0;
+            var mainImage = document.querySelector('.main-image');
+    
+            function showImage(image) {
+                mainImage.src = image.src;
+                currentIndex = images.indexOf(image.src);
+            }
+    
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % images.length;
+                mainImage.src = images[currentIndex];
+            }, 3000);
+        </script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
