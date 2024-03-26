@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./public/css/main.css">
+    </head>
+    <body ng-controller="mainCtrl">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container py-3">
+                <a class="navbar-brand fw-bold fs-2" href="./index.html">
+                    <i class='bx bxs-tree'></i>TRAVEL</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                aria-current="page"
+                                href="./index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tour
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="#">Du lịch trong nước
+                                    </a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">Du lịch nước ngoài
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">Giới
+                                thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Liên
+                                hệ</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item nav-item-primary">
+                            <a class="nav-link" href="./Auth/login.html">Đăng
+                                nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cart.html"><i class='bx bxs-cart fs-3'></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ng-view">
+            
+        </div>
+
+        <div class="footer w-100 py-5 mt-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-lg-4 col-md-6 col-sm-12 text-white footer-content">
+                        <a class="navbar-brand" href="#"><img
+                                src="./public/img/imgPrivate/logo.png" width="50px"
+                                alt></a>
+                        <h4 class="fw-bold text-white mt-2">Phạm An Travel</h4>
+                        <p class="text-secondary">Điện thoại: 0927553664</p>
+                        <p class="text-secondary">Địa chỉ: Cam Ranh, Khánh
+                            Hòa</p>
+                        <p class="text-secondary">Email: Anltweb79@gmail.com</p>
+                        <i class='bx bxl-github mx-1 fs-2'></i>
+                        <i class='bx bxl-facebook-circle mx-1 fs-2'></i>
+                        <i class='bx bxl-youtube mx-1 fs-2'></i>
+                    </div>
+                    <div
+                        class="col-lg-2 col-md-6 col-sm-12 text-white footer-content my-lg-0 my-4">
+                        <h4 class="fw-bold text-white">PA-Travel</h4>
+                        <p class="text-secondary">Giới thiệu</p>
+                        <p class="text-secondary">Liên hệ</p>
+                        <p class="text-secondary">Điều khoản</p>
+                        <p class="text-secondary">Bảo mật</p>
+                        <p class="text-secondary">Chính sách</p>
+                    </div>
+                    <div
+                        class="col-lg-2 col-md-6 col-sm-12 text-white footer-content my-lg-0 my-4">
+                        <h4 class="fw-bold text-white">Danh mục</h4>
+                        <p class="text-secondary">Các địa danh hàng đầu VN</p>
+                        <p class="text-secondary">Ngoài VN</p>
+                        <p class="text-secondary">Ý tưởng chuyến đi</p>
+                        <p class="text-secondary">Quà lưu niệm</p>
+                        <p class="text-secondary">Các địa điểm hot</p>
+                    </div>
+                    <div
+                        class="col-lg-4 col-md-6 col-sm-12 text-white footer-content">
+                        <h4 class="fw-bold text-white">Hệ thống PA-Travel</h4>
+                        <p class="text-secondary">Mã số thuế: 07092004</p>
+                        <p class="text-secondary">Ngày thành lập: 13/3/2024</p>
+                        <p class="text-secondary">Lĩnh vực: Công nghệ, giáo dục,
+                            lập trình. F88 xây
+                            dựng và phát triển những sản phẩm mang lại giá trị
+                            cho cộng đồng.</p>
+                    </div>
+                </div>
+                <span class="d-flex justify-content-center text-white pt-5">©
+                    create by Phạm Ngọc Bảo An</span>
+            </div>
+        </div> 
+        <script src="./public/js/bootstrap.bundle.min.js"></script>
+        <script src="./public/js/angular-1.8.2/angular.min.js"></script>
+        <script src="./public/js/angular-route.min.js"></script>
+        <script src="./app.js"></script>
+        <script src="./controllers/mainCtrl.js"></script>
+        <script src="./controllers/homeCtrl.js"></script>
+    </body>
+</html>

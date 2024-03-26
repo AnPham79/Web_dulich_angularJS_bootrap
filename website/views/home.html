@@ -1,0 +1,247 @@
+<div class="container">
+    <div class="row">
+        <div class="banner-1 col-lg-8 mx-auto">
+            <div id="carouselExampleRide" class="carousel slide"
+                data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active rounded">
+                        <img
+                            src="./public/img/imgPrivate/banner2.jpg"
+                            class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="./public/img/imgPrivate/banner3.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="./public/img/imgPrivate/bnaner1.jpg"
+                            class="d-block w-100" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="banner-2 col-lg-4 mx-auto d-none d-md-block">
+            <div class="row mt-lg-0 mt-3">
+                <div class="col-lg-12 col-md-12 col-sm-6 w-100">
+                    <img class="w-100 rounded"
+                        src="./public/img/imgPrivate/banner3.jpg" alt class="rounded">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-6 w-100 mt-3">
+                    <img class="w-100 rounded"
+                        src="./public/img/imgPrivate/bnaner1.jpg" alt class="rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="menu bg-white p-3 rounded shadow mt-3">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                    <label for="phim" class="form-label">Địa điểm</label>
+                    <select class="form-select" id="phim">
+                        <option selected>Du lịch Nha Trang</option>
+                        <option>Du lịch Đà Nẵng</option>
+                        <option>Du lịch Indo</option>
+                        <option>Du lịch Lào</option>
+                        <option>Du lịch Du lịch Huế</option>
+                        <option>Du lịch Phan Thiết</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                    <label for="ngaychieu" class="form-label">Khuyến mãi</label>
+                    <select class="form-select" id="ngaychieu">
+                        <option selected>Khuyến mãi</option>
+                        <option>Không</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-12 mb-3 mb-md-0">
+                    <label for="xuatchieu" class="form-label">Tour</label>
+                    <select class="form-select" id="xuatchieu">
+                        <option selected>Du lịch nước ngoài</option>
+                        <option>Du lịch trong nước</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <button class="btn btn-warning w-100 mt-4">
+                        <a href="#"
+                            class="text-decoration-none text-white">Kiểm
+                            tra ngay</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="mt-5">Tour hot</h2>
+    <div class="row">
+        <div ng-repeat="tour in danhsachtourhot" class="col-lg-3 col-md-4 col-sm-12 box box-product">
+            <div class="image-container position-relative mt-3">
+                <img src="./public/img/imgPrd/{{ tour.image }}.jpeg" alt
+                    class="img-fluid rounded" style="height: 200px; width: 100%;">
+                <div class="overlay rounded position-absolute">
+                    <div
+                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                        <button class="btn btn-warning"><a href ="./detail.html"
+                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                thêm</a></button>
+                        <button class="btn bg-transparance border-warning mt-2" style="transform: translateX(18px);">
+                            <a href = "./detail.html" class="text-decoration-none text-white">Thêm vào giỏ</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="my-3">{{ tour.name }}</p>
+            <div class="group d-flex justify-content-between">
+                <span><i class='bx bxs-purchase-tag-alt px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.price }} VND</span>
+                <span><i class='bx bxs-calendar px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.start }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button
+            class="mt-4 btn btn-warning bg-transparent class-view-more text-warning d-flex align-items-center">
+            <a href="./product.html" class="text-decoration-none text-warning">Xem
+                thêm</a>
+        </button>
+    </div>
+    <h2 class="mt-5">Tour trong nước</h2>
+    <div class="row">
+        <div ng-repeat="tour in danhsachtourtrongnuoc" class="col-lg-3 col-md-4 col-sm-12 box">
+            <div class="image-container position-relative mt-3">
+                <img src="./public/img/imgPrd/{{ tour.image }}.jpeg" alt
+                    class="img-fluid rounded" style="height: 200px; width: 100%;">
+                <div class="overlay rounded position-absolute">
+                    <div
+                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                        <button class="btn btn-warning"><a href ="./detail.html"
+                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                thêm</a></button>
+                        <button class="btn bg-transparance border-warning mt-2" style="transform: translateX(18px);">
+                            <a href = "./detail.html" class="text-decoration-none text-white">Thêm vào giỏ</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="my-3">{{ tour.name }}</p>
+            <div class="group d-flex justify-content-between">
+                <span><i class='bx bxs-purchase-tag-alt px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.price }} VND</span>
+                <span><i class='bx bxs-calendar px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.start }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button
+            class="mt-4 btn btn-warning bg-transparent class-view-more text-warning d-flex align-items-center">
+            <a href="./product.html" class="text-decoration-none text-warning">Xem
+                thêm</a>
+        </button>
+    </div>
+    <div class="news mt-5">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <h3>Tin tức và sự kiện</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./public/img/imgPrd/new1.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="fw-bold">TPHCM ĐƯỢC VINH DANH "ĐIỂM ĐẾN DU LỊCH MICE HÀNG ĐẦU CHÂU Á"</p>
+                        <p>Tối 6-3, tại thành phố Berlin (Đức), diễn ra lễ trao Giải thưởng Du lịch MICE Thế giới năm 2023 (World MICE Awards). TPHCM được công nhận là "Điểm đến du lịch MICE hàng đầu châu Á năm 2023", đánh dấu năm thứ 4 liên tiếp TPHCM nhận được danh hiệu quý giá này.</p>
+                    </div>
+                </div>
+                <div class="news-more border-top border-warning pt-2 mt-4">
+                    <p class="fw-bold">LỮ HÀNH VIETLUXTOUR ĐỒNG HÀNH CÙNG DU KHÁCH THỰC HIỆN CAM KẾT ESG</p>
+                    <p>Với mục tiêu kinh doanh bền vững, Lữ Hành Vietluxtour đã triển khai chương trình cam kết ESG (Environment – môi trường, Social – xã hội và Governance – quản trị doanh nghiệp) và khuyến khích khách hàng cùng chung tay thực hiện. </p>
+                </div>
+                <div class="news-more border-top border-warning pt-2 mt-4">
+                    <p class="fw-bold">KHÁCH NƯỚC NGOÀI THÍCH THÚ VỚI TOUR 'TÂY ĂN TẾT TA'</p>
+                    <p>Với mục tiêu kinh doanh bền vững, Lữ Hành Vietluxtour đã triển khai chương trình cam kết ESG (Environment – môi trường, Social – xã hội và Governance – quản trị doanh nghiệp) và khuyến khích khách hàng cùng chung tay thực hiện. </p>
+                </div>
+                <button class="btn-news btn border-warning text-warning"><a class="text-decoration-none text-warning" href="./news.html">Xem thêm</a><i class='bx bx-right-arrow-alt'></i></button>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 mt-lg-0 mt-5">
+                <h3>Cảm nhận của khách hàng</h3>
+                <div ng-repeat="news in tintuc" class="row border-top pt-3 border-warning">
+                    <div class="col-lg-4">
+                        <img src="./public/img/imgPrd/{{ news.image }}" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-8">
+                        <small>
+                            <p class="fw-bold">{{ news.title }}</p>
+                            <p>{{ news.description }}</p>
+                        </small>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+    </div>
+    <div class="review mt-5">
+        <h2 class="my-3">Góc lữ hành</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="./public/img/imgPrivate/gocluhanh1.jpg" alt="" class="w-100 rounded">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img src="./public/img/imgPrivate/gocluhang2.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                        <img src="./public/img/imgPrivate/gocluhanh3.jpg" alt="" class="w-100 mt-2 rounded">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img src="./public/img/imgPrivate/gocluhang4.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                        <img src="./public/img/imgPrivate/gocluhang5.jpg" alt="" class="w-100 mt-2 rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog mt-5 bg-dark p-5 rounded text-white">
+        <h2 class="my-3">Blog du lịch</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="./public/img/imgPrivate/blog1.jpg" alt="" class="w-100 rounded">
+                <p>Các khu mua sắm ở Hàn Quốc bạn đã biết chưa ?</p>
+                <p>27/2/2023</p>
+                <p>Du lịch Hàn Quốc đi mua sắm ở đâu? Cùng Vietluxtour khám phá những khu mua sắm ở Hàn Quốc và những lưu ý hữu ích nhé!</p>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img src="./public/img/imgPrivate/blog2.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                        <p>Các khu mua sắm ở Hàn Quốc bạn đã biết chưa ?</p>
+                <p>27/2/2023</p>
+                <p>Du lịch Hàn Quốc đi mua sắm ở đâu? Cùng Vietluxtour khám phá những khu mua sắm ở Hàn Quốc và những lưu ý hữu ích nhé!</p>
+                        <img src="./public/img/imgPrivate/blog3.jpg" alt="" class="w-100 mt-2 rounded">
+                        <p>Các khu mua sắm ở Hàn Quốc bạn đã biết chưa ?</p>
+                <p>27/2/2023</p>
+                <p>Du lịch Hàn Quốc đi mua sắm ở đâu? Cùng Vietluxtour khám phá những khu mua sắm ở Hàn Quốc và những lưu ý hữu ích nhé!</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img src="./public/img/imgPrivate/blog4.jpg" alt="" class="w-100 rounded mt-lg-0 mt-3">
+                        <p>Các khu mua sắm ở Hàn Quốc bạn đã biết chưa ?</p>
+                <p>27/2/2023</p>
+                <p>Du lịch Hàn Quốc đi mua sắm ở đâu? Cùng Vietluxtour khám phá những khu mua sắm ở Hàn Quốc và những lưu ý hữu ích nhé!</p>
+                        <img src="./public/img/imgPrivate/blog5.jpg" alt="" class="w-100 mt-2 rounded">
+                        <p>Các khu mua sắm ở Hàn Quốc bạn đã biết chưa ?</p>
+                <p>27/2/2023</p>
+                <p>Du lịch Hàn Quốc đi mua sắm ở đâu? Cùng Vietluxtour khám phá những khu mua sắm ở Hàn Quốc và những lưu ý hữu ích nhé!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
