@@ -5,11 +5,15 @@ app.config(function($routeProvider) {
         templateUrl: 'views/home.html',
         controller: 'homeCtrl',
     })
-    .when('/news', {
-        templateUrl: 'views/news.html'
+    .when('/about', {
+        templateUrl: 'views/about.html'
     })
-    .when('/cart', {
-        templateUrl: 'views/cart.html'
+    .when('/contact', {
+        templateUrl: 'views/contact.html'
+    })
+    .when('/detail/:id', {
+        templateUrl: 'views/detail.html',
+        controller: 'detailCtrl',
     })
     .otherwise({
         template : "404 không tìm thấy file"
