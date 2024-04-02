@@ -5,7 +5,7 @@ app.controller('detailCtrl', function($scope, $http ,$routeParams) {
             $scope.detail = res.data;
         },
         function(res) { // thất bại
-
+            
         }
     )
 });

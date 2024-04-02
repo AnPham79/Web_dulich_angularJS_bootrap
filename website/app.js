@@ -15,6 +15,14 @@ app.config(function($routeProvider) {
         templateUrl: 'views/detail.html',
         controller: 'detailCtrl',
     })
+    .when('/product', {
+        templateUrl: 'views/product.html',
+        controller: 'productCtrl',
+    })
+    .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'loginCtrl',
+    })
     .otherwise({
         template : "404 không tìm thấy file"
     });

@@ -40,7 +40,7 @@
       "price": 5900000,
       "sale": 4900000,
       "duration": "4 ngày 3 đêm",
-      "transport": 6.1,
+      "transport": "thuyền",
       "hotel": 4,
       "start": "01/09/2023",
       "content": "Từ năm 1653 đến giữa thế kỷ XIX, Nha Trang vẫn là một vùng đất còn hoang vu và nhiều thú dữ thuộc Hà Bạc, huyện Vĩnh Xương, phủ Diên Khánh. Chỉ qua hai thập niên đầu thế kỷ XX, bộ mặt Nha Trang đã thay đổi nhanh chóng. Với Nghị định ngày 30 tháng 8 năm 1924 của Toàn quyền Đông Dương, Nha Trang trở thành một thị trấn (centre urbain)[6]. Thị trấn Nha Trang hình thành từ các làng cổ: Xương Huân, Phương Câu, Vạn Thạnh, Phương Sài, Phước Hải. Thời Pháp thuộc, Nha Trang được coi là tỉnh lỵ (chef lieu) của tỉnh Khánh Hòa. Các cơ quan chuyên môn của chính quyền thuộc địa như Tòa Công sứ, Giám binh, Nha Thương chánh, Bưu điện... đều đặt tại Nha Trang. Tuy nhiên, các cơ quan Nam triều như dinh quan Tuần vũ, Án sát (coi về hành chánh, tư pháp), Lãnh binh (coi việc trật tự trị an) vẫn đóng ở Thành Diên Khánh (cách Nha Trang 10 km về phía Tây Nam)."
@@ -156,7 +156,7 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "nhatban",
-      "thumbnail": ["nhatban1", "nhatban2", "nhatban3"],
+      "thumbnail": ["nhatban1", "nhatban1", "nhatban"],
       "price": 5900000,
       "sale": 4900000,
       "duration": "6 ngày 5 đêm",
@@ -244,27 +244,27 @@
   "news": [
     {
       "id": "1",
-      "title": "Chuyến đi teambuilding công ty IntES, tour Phan Thiết 15-17/9/2023",
-      "image": "banner1.png",
-      "description": "Tour Phan Thiết của Công ty IntES chuyến teambuilding cuối năm thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour."
+      "title": "Khám phá vùng đất mới tại Đảo Đại Lục Xanh",
+      "image": "chauau",
+      "description": "Đảo Đại Lục Xanh, một điểm đến mới lạ và đầy hấp dẫn với cảnh quan thiên nhiên tuyệt đẹp và văn hóa độc đáo, đã thu hút sự chú ý của các du khách khắp nơi. Tận hưởng không gian yên bình của rừng nguyên sinh, khám phá các khu bảo tồn động vật hoang dã và thưởng ngoạn vẻ đẹp hùng vĩ của các dãy núi và thác nước."
     },
     {
       "id": "2",
-      "title": "Chuyến đi teambuilding công ty IntES, tour Phan Thiết 15-17/9/2023",
-      "image": "banner2.jpeg",
-      "description": "Tour Phan Thiết của Công ty IntES chuyến teambuilding cuối năm thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour."
+      "title": "Lễ hội hoa anh đào nở rộ tại Nhật Bản",
+      "image": "nhatban",
+      "description": "Lễ hội hoa anh đào, một trong những sự kiện văn hóa nổi tiếng của Nhật Bản, đã bắt đầu diễn ra với sự xuất hiện của hàng triệu bông hoa anh đào nở rộ khắp các thành phố và vùng quê. Du khách từ khắp nơi trên thế giới đổ về để tham gia ngắm nhìn và chụp ảnh cùng những bức tranh hoa đẹp mắt."
     },
     {
       "id": "3",
-      "title": "Chuyến đi teambuilding công ty IntES, tour Phan Thiết 15-17/9/2023",
-      "image": "banner3.jpeg",
-      "description": "Tour Phan Thiết của Công ty IntES chuyến teambuilding cuối năm thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour."
+      "title": "Trải nghiệm văn hóa tại Làng Bản Phùng, Việt Nam",
+      "image": "nhatrang",
+      "description": "Làng Bản Phùng, một điểm đến văn hóa truyền thống của dân tộc H'mông tại Việt Nam, đang thu hút sự quan tâm của du khách bởi không chỉ là nơi để khám phá văn hóa dân tộc độc đáo mà còn là nơi để trải nghiệm cuộc sống đồng bào dân tộc với các hoạt động như thăm nhà dân, thưởng thức ẩm thực địa phương và tham gia vào các lễ hội truyền thống."
     },
     {
       "id": "4",
-      "title": "Chuyến đi teambuilding công ty IntES, tour Phan Thiết 15-17/9/2023",
-      "image": "banner4.png",
-      "description": "Tour Phan Thiết của Công ty IntES chuyến teambuilding cuối năm thành công trên mong đợi, được ban quản lý gửi những lời khen ngợi đến đội ngũ nhân viên Lữ Hành Vietluxtour."
+      "title": "Phượt qua những cung đường ngoạn mục ở Iceland",
+      "image": "chauau1",
+      "description": "Iceland, với cảnh quan thiên nhiên hoang sơ và hùng vĩ, là điểm đến lý tưởng cho những ai yêu thích sự phiêu lưu và khám phá. Hãy trải nghiệm cảm giác thú vị khi lái xe qua các con đường đèo, ngắm nhìn những hồ nước biển lấp lánh và tham gia vào các hoạt động như đi bộ đường dài, chèo kayak trên biển và ngắm cảnh bắt nguồn từ những dãy núi băng tuyết."
     }
   ]
 }

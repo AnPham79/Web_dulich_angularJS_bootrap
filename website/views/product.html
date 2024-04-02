@@ -1,515 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
-        <link rel="stylesheet"
-            href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
-    </head>
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid py-3">
-                    <a class="navbar-brand fw-bold fs-2" href="./index.html">
-                        <i class='bx bxs-tree'></i>TRAVEL</a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse"
-                        id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                    aria-current="page"
-                                    href="index.html">Trang chủ</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"
-                                    href="#"
-                                    role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Tour
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch Miền Bắc</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch nước ngoài</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền trung</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền nam</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">Giới
-                                    thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Liên
-                                    hệ</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item nav-item-primary">
-                                <a class="nav-link" href="./Auth/login.html">Đăng
-                                    nhập</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./cart.html"><i class='bx bxs-cart fs-3'></i></a>
-                            </li>
-                        </ul>
-                    </div>
+<div class="container">
+    <h1 class="my-5 text-warning">Những địa điểm du lịch khác</h1>
+    <div class="row">
+        <div class="category col-lg-3 col-md-12 col-sm-12">
+            <div class="col-md-12">
+                <h5>Danh mục tour du lịch</h5>
+                <ul class="list-group">
+                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('default')">Mặc định</li>
+                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('international')">Quốc tế</li>
+                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('domestic')">Trong nước</li>
+                </ul>
+            </div>            
+            <div class="col-md-12 mt-3">
+                <h5>Thanh lọc</h5>
+                <div class="btn-group d-flex flex-wrap" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                    <label class="btn btn-outline-primary m-1" for="option1">Tất cả</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-outline-primary m-1" for="option2">miền Name</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-outline-primary m-1" for="option3">miền Bắc</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-outline-primary m-1" for="option4">miền Trung</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn-outline-primary m-1" for="option5">Nước ngoài</label>
                 </div>
-            </nav>
-            <h1 class="my-5 text-warning">Những địa điểm du lịch khác</h1>
+            </div>
+            <div class="col-md-12 mt-3">
+                <h5>Lọc theo giá</h5>
+                <div class="input-group">
+                    <span class="input-group-text">Từ:</span>
+                    <input type="text" class="form-control" placeholder="VNĐ">
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text">Đến:</span>
+                    <input type="text" class="form-control" placeholder="VNĐ">
+                </div>
+                <button class="btn btn-primary mt-3">Áp dụng</button>
+            </div>
+        </div>
+        <div class="product-list col-lg-8 col-md-12 col-sm-12">
+            <div class="search mt-lg-0 mt-5">
+                <div class="search d-flex justify-content-end">
+                    <input type="text" class="form-control w-50" placeholder="Tìm kiếm..." ng-model="search">
+                </div>
+            </div>
             <div class="row">
-                <div class="category col-lg-3 col-md-12 col-sm-12">
-                    <div class="col-md-12">
-                        <h5>Danh mục tour du lịch</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">Du lịch nội địa</li>
-                            <li class="list-group-item">Du lịch quốc tế</li>
-                            <li class="list-group-item">Tour mùa hè</li>
-                            <li class="list-group-item">Tour mùa đông</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 mt-3">
-                        <h5>Thanh lọc</h5>
-                        <div class="btn-group d-flex flex-wrap" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
-                            <label class="btn btn-outline-primary m-1" for="option1">Tất cả</label>
-                        
-                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                            <label class="btn btn-outline-primary m-1" for="option2">miền Name</label>
-                        
-                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                            <label class="btn btn-outline-primary m-1" for="option3">miền Bắc</label>
-                        
-                            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                            <label class="btn btn-outline-primary m-1" for="option4">miền Trung</label>
-                        
-                            <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
-                            <label class="btn btn-outline-primary m-1" for="option5">Nước ngoài</label>
-                        </div>                        
-                    </div>
-                    <div class="col-md-12 mt-3">
-                        <h5>Lọc theo giá</h5>
-                        <div class="input-group">
-                            <span class="input-group-text">Từ:</span>
-                            <input type="text" class="form-control" placeholder="VNĐ">
-                        </div>
-                        <div class="input-group mt-2">
-                            <span class="input-group-text">Đến:</span>
-                            <input type="text" class="form-control" placeholder="VNĐ">
-                        </div>
-                        <button class="btn btn-primary mt-3">Áp dụng</button>
-                    </div>
-                    <div class="container mt-4">
-                        <h2>Lọc giá</h2>
-                        <input type="range" min="1000000" max="10000000" value="1000000" class="slider" id="discountSlider">
-                        <p>Giá giảm: <span id="discountAmount"></span></p>
-                    </div>
-                </div>
-                <div class="product-list col-lg-8 col-md-12 col-sm-12">
-                    <div class="search mt-lg-0 mt-5">
-                        <div class="search d-flex justify-content-end">
-                            <input type="text" class="form-control w-50" placeholder="Tìm kiếm...">
-                            <button class="btn btn-primary ms-2">Tìm kiếm</button>
+                <div ng-repeat="tour in products | limitTo: productPerPage : begin | filter: { name: search }" class="col-lg-4 col-md-6 col-sm-12 box box-product">
+                    <div class="image-container position-relative mt-3">
+                        <img src="./public/img/imgPrd/{{ tour.image }}.jpeg" alt
+                            class="img-fluid rounded" style="height: 200px; width: 100%;">
+                        <div class="overlay rounded position-absolute">
+                            <div
+                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-warning"><a href ="#!detail/{{ tour.id }}"
+                                        class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
+                                        thêm</a></button>
+                                <button class="btn bg-transparance border-warning mt-2" style="transform: translateX(18px);">
+                                    <a href = "./detail.html" class="text-decoration-none text-white">Thêm vào giỏ</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img src="./asset/prd/kungfu-panda-4-500_1708659195441.jpg" alt
-                                    class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">BALI (INDONESIA) - HÒN ĐẢO THIÊN ĐƯỜNG</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img src="./asset/prd/500_1709025551999.jpg" alt
-                                    class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Ngắm hoàng hôn ở Vịnh Hạ Long</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img src="./asset/prd/baghead-500_1708317004756.jpg" alt
-                                    class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch singapore</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img src="./asset/prd/dune-2-500_1708588988385.jpg" alt
-                                    class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Nghỉ dưỡng tại khu nghỉ dưởng samten</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/kungfu-panda-4-500_1708659195441.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Khám phá ngôi đền phật ở Ấn Độ</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img src="./asset/prd/mai-500_1707105158298.jpg" alt
-                                    class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch Đà Nẵng ngắm Cầu Rồng</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/tieng-yeu-khong-loi-500_1709869385632.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Ngắm hoa anh đào ở Nhật Bản</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="image-container position-relative mt-3">
-                                <img
-                                    src="./asset/prd/qu-co-thua-ke-2-500_1708503483342.jpg"
-                                    alt class="img-fluid rounded">
-                                <div class="overlay rounded position-absolute">
-                                    <div
-                                        class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                        <button class="btn btn-warning"><a href
-                                                class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
-                                                thêm</a></button>
-                                        <button
-                                            class="btn bg-transparance border-warning mt-2"><a
-                                                href
-                                                class="text-decoration-none text-white"><i
-                                                    class='bx bx-play-circle'></i>Xem
-                                                trailer</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="my-3">Du lịch huế khám phá khu di tích cố đô Huế</p>
-                        </div>
-                    </div>
-                    <div class="pagination justify-content-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            </ul>
-                        </nav>
+                    <p class="my-3">{{ tour.name }}</p>
+                    <div class="group d-flex justify-content-between">
+                        <span><i class='bx bxs-purchase-tag-alt px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.price }} VND</span>
+                        <span><i class='bx bxs-calendar px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.start }}</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer mt-5 bg-dark text-white pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <a class="navbar-brand fw-bold fs-2 text-white"
-                            href="#">
-                            <i class='bx bxs-tree'></i>TRAVEL</a>
-                        <p>
-                            Chào mừng bạn đến với trang web du lịch, nơi bạn có
-                            thể khám phá những điểm đến tuyệt vời trên khắp thế
-                            giới và lập kế hoạch cho những cuộc phiêu lưu đáng
-                            nhớ.
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Giới thiệu</h5>
-                        <p>Về chúng tôi</p>
-                        <p><i class='bx bx-chevron-right'></i>Thỏa thuận sử
-                            dụng</p>
-                        <p><i class='bx bx-chevron-right'></i>Quy chế hoạt
-                            động</p>
-                        <p><i class='bx bx-chevron-right'></i>Chính sách bảo
-                            mật</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Danh mục</h5>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Bắc</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Trung</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Nam</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch nước
-                            ngoài</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Hỗ trợ</h5>
-                        <p><i class='bx bx-chevron-right'></i>Góp ý</p>
-                        <p><i class='bx bx-chevron-right'></i>Sale & service</p>
-                        <p><i class='bx bx-chevron-right'></i>Rạp / giá vé</p>
-                        <p><i class='bx bx-chevron-right'></i>Tuyển dụng</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container border-top py-2">
-                <p class="text-center mb-0"> <i class='bx bx-copyright'></i>
-                    Copyright and created by Phạm Ngọc Bảo An
-                </p>
-            </div>
-        </div>
-        <script>
-            var discountSlider = document.getElementById("discountSlider");
-            var discountAmount = document.getElementById("discountAmount");
-        
-            discountAmount.textContent = formatPrice(discountSlider.value);
-        
-            discountSlider.oninput = function() {
-                discountAmount.textContent = formatPrice(this.value);
-            };
-        
-            function formatPrice(price) {
-                return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " VND";
-            }
-        </script>
-        <script
-            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+    </div>
+    <div class="container mt-5">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" ng-repeat="page in arraypage">
+                    <button class="btn btn-primary rounded-0 border" ng-click="setCurrentPage(page)">{{ page }}</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

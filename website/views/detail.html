@@ -13,7 +13,7 @@
     <body>
         <div class="article-detail">
             <div class="banner-detail w-100 d-flex overflow-hidden">
-                <img src="./asset/img/banner-detail.png" alt
+                <img src="./public/img/imgPrivate/banner-detail.png" alt
                     class="w-100 object-fit-cover">
             </div>
             <div class="container">
@@ -54,156 +54,52 @@
                                 </form>
                             </div>
                         </div>
-                        <div
-                            class="img-prd-detail col-lg-4 col-md-12 col-sm-12 mt-4">
+                        <div class="img-prd-detail col-lg-4 col-md-12 col-sm-12 mt-4">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <img
-                                        src="./asset/prd/marita-500_1709276827076.jpg"
-                                        alt class="w-100 rounded main-image">
+                                    <img src="./public/img/imgPrd/{{ detail.image }}.jpeg" alt class="w-100 rounded main-image">
                                 </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12 d-flex">
-                                    <div
-                                        class="col-lg-6 me-lg-1 mt-lg-1 col-md-6 me-md-1 mt-md-1 col-sm-6">
-                                        <img src="./asset/prd/trungquoc1.jpg"
-                                            alt
-                                            class="w-100 rounded my-1 thumbnail"
-                                            onclick="showImage(this)">
-                                    </div>
-                                    <div
-                                        class="col-lg-6 m-lg-1 col-md-6 m-md-1 col-sm-6">
-                                        <img src="./asset/prd/trungquoc2.jpg"
-                                            alt
-                                            class="w-100 rounded my-1 thumbnail"
-                                            onclick="showImage(this)">
-                                    </div>
-                                    <div
-                                        class="col-lg-6 m-lg-1 col-md-6 m-md-1 col-sm-6">
-                                        <img src="./asset/prd/trungquoc3.jpg"
-                                            alt
-                                            class="w-100 rounded my-1 thumbnail"
-                                            onclick="showImage(this)">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 d-flex">
+                                    <div ng-repeat="thumbnail in detail.thumbnail" class="col-lg col-md col-sm">
+                                        <img ng-src="./public/img/imgPrd/{{ thumbnail }}.jpeg" alt class="rounded my-1 thumbnail" ng-click="showImage(thumbnail)" style="width: 100%; padding: 2px;"> 
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
+                        
                         <div
                             class="icon-detail-prd col-lg-4 col-md-12 col-sm-12 mt-4">
-                            <h2 class="text-warning"><b>Tour du lịch trung quốc
-                                    2 ngày 1 đêm</b></h2>
+                            <h2 class="text-warning"><b>{{ detail.name }}</b></h2>
                             <p><i class='bx bx-money text-warning mx-2'></i>Giá:
-                                <b>7,990,000 đ</b></p>
+                                <b>{{ detail.price }} đ</b></p>
                             <p><i
                                     class='bx bx-barcode text-warning mx-2'></i>Mã:
                                 <b>TNA12364-29032024-SD</b></p>
                             <p><i
                                     class='bx bxs-plane-take-off text-warning mx-2'></i>Khỏi
-                                hành: <b>29/03/2024</b></p>
-                            <p><i
-                                    class='bx bxs-plane-land text-warning mx-2'></i>Ngày
-                                về: <b>01/04/2024</b></p>
+                                hành: <b>{{ detail.start }}</b></p>
                             <p><i class='bx bx-time text-warning mx-2'></i>Thời
-                                gian: <b>2 ngày 1 đêm</b></p>
+                                gian: <b>{{ detail.duration }}</b></p>
                             <p><i
                                     class='bx bxs-map-pin text-warning mx-2'></i>Khởi
                                 hành từ: <b>TP.HCM</b></p>
                             <p><i
+                                class='bx bxs-map-pin text-warning mx-2'></i>Vùng: <b>{{ detail.kind }}</b></p>
+                            <p><i
                                     class='bx bxs-plane text-warning mx-2'></i>Phương
-                                tiện: <b>Máy bay</b></p>
-                            <button class="btn btn-warning text-white"><a href="./order.html" class="text-decoration-none text-white">Đặt
-                                ngay</a></button>
+                                tiện: <b>{{ detail.transport }}</b></p>
+                            <button class="btn btn-warning text-white"><a
+                                    href="./order.html"
+                                    class="text-decoration-none text-white">Đặt
+                                    ngay</a></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-description m-lg-5 m-md-5 my-4">
-                    <span class="fw-bold">NGÀY 01: NỘI BÀI – ĐÀ NẴNG ( Ăn: Trưa/
-                        Tối)</span>
-                    <p>Sáng: Xe và HDV của Văn Hóa & DL Hà Nội đón quý khách tại
-                        điểm hẹn, khởi hành ra sân bay nội bài, làm thủ tục trên
-                        chuyến bay của hang hàng không VN Airlines / VJ… đi Đà
-                        Nẵng. Tới Đà Nẵng xe đón quý khách khởi hành về khách
-                        sạn nhận phòng nghỉ ngơi.
-                        Trưa 12h00: Quý khách dùng cơm trưa tại nhà hàng. Sau
-                        bữa trưa đoàn nghỉ ngơi tại khách sạn.
-                        Chiều: Quý khách tự do tham quan tắm biển, tham gia các
-                        hoạt động vui chơi tại bãi biển như: cano lướt sóng,
-                        bóng đá bãi biển, bóng chuyền bãi biển…
-                        Tối 19h00: Quý khách dùng cơm tối tại nhà hàng. Sau bữa
-                        tối đoàn tự do tham quan khám phá thành phố Đà Nẵng về
-                        đêm.
-                    </p>
-                    <span class="fw-bold">NGÀY 02: BÁN ĐẢO SƠN TRÀ – NGŨ HÀNH
-                        SƠN – HỘI AN ( Ăn: Sáng/ Trưa/ Tối)</span>
-                    <p>Sáng: Quý khách dậy sớm ngắm cảnh bình minh trên biển,
-                        hòa bình vào làn nước biển trong xanh của bãi biển Mỹ
-                        Khê, một trong 6 bãi biển đẹp nhất hành tinh do tạp chí
-                        Fobes bình chọn.
-                        07h00 – 08h00: Quý khách dùng điểm tâm Buffet tại khách
-                        sạn.
-                        08h05 – 08h30: Xe và HDV đón quý khách khởi hành tham
-                        quan Bán Đảo Sơn Trà thưởng ngoạn toàn cảnh phố biển Đà
-                        Nẵng trên cao. Xe đưa quý khách dọc theo triền núi Đông
-                        Nam để chiêm ngưỡng vẻ đẹp tuyệt mỹ của biển Đà Nẵng,
-                        viếng chùa Linh Ứng Tự - nơi có tượng Phật Bà 67m cao
-                        nhất Việt Nam.
-                        09h00: Tiếp tục hành trình, xe đưa quý khách thăm quan
-                        danh thắng Ngũ Hành Sơn (khám phá các hang động, vãn
-                        cảnh đẹp non nước trời mây, viếng những ngôi chùa
-                        thiêng), Làng Nghề Điêu Khắc Đá Non Nước, tận mắt chiêm
-                        ngưỡng những tác phẩm độc đáo bằng đá được tạc bởi bàn
-                        tay của những người thợ tài hoa.
-                        Trưa 11h30: Kết thúc chương trình tham quan, xe đón quý
-                        khách về nhà hàng dùng cơm trưa, sau bữa cơm trưa đoàn
-                        nghỉ ngơi tại khách sạn.
-                        Chiều: Quý khách tự do tham quan tăm biển Đà Nẵng.
-                        18h00: Xe đón quý khách khởi hành đi Hội An.
-                        Tối 19h30: Qúy khách ăn tối tại nhà hàng, thưởng thức
-                        đặc sản Hội An. Sau bữa tối Qúy khách bách bộ tham quan
-                        mua sắm tại Phố Cổ Hội An – Nơi được UNESCO công nhận là
-                        Di sản văn hóa thế giới, với các điểm tham quan: Chùa
-                        Cầu Nhật Bản, Nhà Cổ hàng trăm năm tuổi, Hội Quán Phước
-                        Kiến & Xưởng thủ công mỹ nghệ…Tự do mua sắm các mặt hàng
-                        lưu niệm phong phú nơi đây..
-                        Tối 21h00: Xe đưa quý khách về lại Đà Nẵng dọc đường
-                        biển để ngắm thành phố Đà Nẵng tuyệt đẹp về đêm với hàng
-                        loạt khu nghỉ dưỡng và Resort cao cấp. Ngủ đêm tại khách
-                        sạn tại Đà Nẵng.
-                    </p>
-                    <span class="fw-bold">NGÀY 03: BÀ NÀ HILLS – CHỐN BỒNG LAI
-                        TIÊN CẢNH ( Ăn: Sáng/ Trưa/ Tối)</span>
-                    <p>Sáng 05h00: Quý khách dậy sớm ngắm cảnh bình minh trên
-                        biển, tắm biển và tham gia các hoạt động vui chơi trên
-                        biển như: bóng đá bãi biển, bóng chuyền bãi biển…
-                        07h00 – 08h00: Quý khách dùng điểm tâm Buffet sáng tại
-                        khách sạn.
-                        08h05: Xe đưa quý khách khởi hành đi khu du lịch Bà Nà –
-                        Núi Chúa, nơi mà quý khách khám phá những khoảnh khắc
-                        giao mùa bất ngờ Xuân – Hạ - Thu – Đông trong 1 ngày.
-                        09h00: Đến ga Đến ga cáp treo Suối Mơ, lên tuyến cáp
-                        treo đạt 2 kỷ lục thế giới, (dài gần 6.000m), quý khách
-                        tham quan Khu Le Jardin, tham quan Hầm Rượu Debay của
-                        Pháp (chi phí tự túc). Viếng Chùa Linh Ứng Bà Nà, chiêm
-                        ngưỡng tượng Phật Thích Ca cao 27m, Vườn Lộc Uyển, Quan
-                        Âm Các. Tiếp tục đến Gare Debay đi tuyến cáp thứ 2 lên
-                        đỉnh Bà Nà.
-                        Trưa 11h30: Quý khách dùng bữa trưa Buffet tại nhà hàng.
-                        Tự do nghỉ ngơi, ngắm cảnh Bà Nà Hill.
-                        Chiều: Qúy khách tiếp tục phục đỉnh Núi Chúa ở độ cao
-                        1.487m so với mực nước biển để thưởng thức quang cảnh
-                        núi rừng Bà Nà và toàn cảnh Đà Nẵng và Quảng Nam trên
-                        cao.
-                        Tiếp đó HDV đưa quý khách tham quan khu vui chơi Fantasy
-                        Park, quý khách tự do tham gia các trò chơi phiêu lưu
-                        mới lạ, hấp dẫn, hiện đại như vòng quay tình yêu, phi
-                        công Skiver, đường đua lửa, xe điện đụng, ngôi nhà ma…
-                        Chiều 15h00: Qúy khách xuống cáp treo về lại Đà Nẵng. Xe
-                        đưa quý khách về khách sạn, quý khách tự do nghỉ ngơi,
-                        tắm biển.
-                        Tối 18h30: Đoàn ăn tối tại nhà hàng, sau đó là thời gian
-                        tự do khám phá thành phố Đà Nẵng về đêm, tản bộ dọc 2 bờ
-                        sông Hàn thơ mộng ngắm Cầu Quay sông Hàn, thưởng thức
-                        café, nét văn hóa người dân Đà Nẵng. Ngủ đêm tại Khách
-                        sạn ở Đà Nẵng.
+                    <span class="fw-bold">{{ detail.name }}</span>
+                    <p>{{ detail.content }}
                     </p>
                 </div>
                 <div class="feed-back">
@@ -347,20 +243,31 @@
                     class="w-100 my-4"></iframe>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
         <script>
-            var images = ['./asset/prd/marita-500_1709276827076.jpg', './asset/prd/trungquoc1.jpg', './asset/prd/trungquoc2.jpg', './asset/prd/trungquoc3.jpg'];
-            var currentIndex = 0;
-            var mainImage = document.querySelector('.main-image');
-    
-            function showImage(image) {
-                mainImage.src = image.src;
-                currentIndex = images.indexOf(image.src);
-            }
-    
-            setInterval(function() {
-                currentIndex = (currentIndex + 1) % images.length;
-                mainImage.src = images[currentIndex];
-            }, 3000);
+            var app = angular.module('myApp', []);
+            
+            app.controller('YourController', function($scope, $interval) {
+                $scope.currentIndex = 0;
+                $scope.mainImage = './public/img/imgPrd/{{ detail.image }}.jpeg';
+                
+                $scope.images = [
+                    './public/img/imgPrd/{{ detail.image }}.jpeg',
+                    './public/img/imgPrd/{{ detail.thumbnail[0] }}.jpeg',
+                    './public/img/imgPrd/{{ detail.thumbnail[1] }}.jpeg',
+                    './public/img/imgPrd/{{ detail.thumbnail[2] }}.jpeg'
+                ];
+            
+                $scope.showImage = function(image) {
+                    $scope.mainImage = image;
+                    $scope.currentIndex = $scope.images.indexOf(image);
+                };
+            
+                $interval(function() {
+                    $scope.currentIndex = ($scope.currentIndex + 1) % $scope.images.length;
+                    $scope.mainImage = $scope.images[$scope.currentIndex];
+                }, 3000);
+            });
         </script>
         <script
             src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

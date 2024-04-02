@@ -23,4 +23,11 @@ app.controller('homeCtrl', function($scope, $http){
 
         }
     )
+    $scope.sort = function(order) {
+        if (order === 'asc') {
+            $scope.danhsachtourhot.sort((a, b) => a.price - b.price);
+        } else if (order === 'desc') {
+            $scope.danhsachtourhot.sort((a, b) => b.price - a.price);
+        }
+    };
 }) 
