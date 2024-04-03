@@ -1,4 +1,5 @@
 app.controller("productCtrl", function ($scope, $http) {
+  // phân trang
   $scope.currentPage = 1;
   $scope.productPerPage = 9;
 
@@ -25,18 +26,25 @@ app.controller("productCtrl", function ($scope, $http) {
     }
   );
 
-  // $scope.prev = function (page) {
-  //     if (page > 1) {
-  //         $scope.currentPage = page - 1;
-  //     }
-  // };
+  // lọc sản phẩm theo giá do mình quy định
+  $scope.applyFilterPrice = function () {
+    var filteredProducts = $scope.products.filter(function (tour) {
+      return tour.price >= $scope.minPrice && tour.price <= $scope.maxPrice;
+    });
 
-  // $scope.next = function (page) {
-  //     if (page < $scope.pages) {
-  //         $scope.currentPage = page + 1;
-  //     }
-  // };
+    $scope.products = filteredProducts;
+  };
 
+  // lọc sản phẩm theo option
+  $scope.priceAsc = function () {
+    $scope.sort = "price";
+  };
+
+  $scope.priceDesc = function () {
+    $scope.sort = "-price";
+  };
+
+  // lọc sản phẩm theo location
   $scope.sortkind = function (order) {
     var url = "http://localhost:3000/products/";
     if (order === "international") {
@@ -60,7 +68,7 @@ app.controller("productCtrl", function ($scope, $http) {
         }
       );
     } else if (order === "default") {
-      url = 'http://localhost:3000/products';
+      url = "http://localhost:3000/products";
       $http.get(url).then(
         function (res) {
           $scope.products = res.data;

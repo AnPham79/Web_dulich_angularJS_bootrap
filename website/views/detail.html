@@ -1,275 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
-        <link rel="stylesheet"
-            href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
-    </head>
-    <body>
-        <div class="article-detail">
-            <div class="banner-detail w-100 d-flex overflow-hidden">
-                <img src="./public/img/imgPrivate/banner-detail.png" alt
-                    class="w-100 object-fit-cover">
-            </div>
-            <div class="container">
-                <div class="product-detail">
+
+<div class="article-detail">
+    <div class="banner-detail w-100 d-flex overflow-hidden">
+        <img src="./public/img/imgPrivate/banner-detail.png" alt
+            class="w-100 object-fit-cover">
+    </div>
+    <div class="container">
+        <div class="product-detail mt-5">
+            <div class="row">
+                <div
+                    class="img-prd-detail col-lg-8 col-md-12 col-sm-12 px-3 my-lg-0 mb-5">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb fs-6">
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="text-decoration-none text-secondary">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#"
+                                    class="text-decoration-none text-secondary">Product</a></li>
+                            <li class="breadcrumb-item active"
+                                aria-current="page">Detail</li>
+                        </ol>
+                    </nav>
+                    <h3>{{ detail.name }} - hãy để chúng tôi mang đến những trãi
+                        nghiệm tốt nhất cho bạn.</h3>
+                    <p>Cùng nhau khám phá !!!</p>
+                    <hr width="50%" class="border-3 border-primary opacity-100">
                     <div class="row">
-                        <div
-                            class="img-prd-detail col-lg-4 col-md-12 col-sm-12">
-                            <div class="border p-4 mt-3 m-lg-0 m-5">
-                                <div class="text-center mb-4 hotline-detail">
-                                    <h4>MỌI THẮC MẮC XIN VUI LÒNG LIÊN HỆ</h4>
-                                    <p><i
-                                            class='bx bxs-phone text-warning px-1'></i>Hotline:
-                                        0927 553 664</p>
-                                    <p><i
-                                            class='bx bxs-envelope text-warning px-1'></i>Email:
-                                        Anltweb79@gmail.com</p>
-                                </div>
-                                <h4 class="text-center">Hoặc là để lại thông
-                                    tin</h4>
-                                <form>
-                                    <div class="form-group mt-3">
-                                        <label for="phoneInput" class="m-1">Số
-                                            điện thoại</label>
-                                        <input type="tel" class="form-control"
-                                            id="phoneInput"
-                                            placeholder="Nhập số điện thoại">
-                                    </div>
-                                    <div class="form-group mt-3">
-                                        <label for="emailInput"
-                                            class="m-1">Email</label>
-                                        <input type="email" class="form-control"
-                                            id="emailInput"
-                                            aria-describedby="emailHelp"
-                                            placeholder="Nhập email">
-                                    </div>
-                                    <button type="submit"
-                                        class="text-white btn btn-warning mt-3">Gửi</button>
-                                </form>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img
+                                src="./public/img/imgPrd/{{ detail.image }}.jpeg"
+                                alt class="w-100 rounded main-image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 d-flex">
+                            <div ng-repeat="thumbnail in detail.thumbnail"
+                                class="col-lg col-md col-sm">
+                                <img
+                                    ng-src="./public/img/imgPrd/{{ thumbnail }}.jpeg"
+                                    alt class="rounded my-1 thumbnail"
+                                    ng-click="showImage(thumbnail)"
+                                    style="width: 100%; padding: 2px;">
                             </div>
                         </div>
-                        <div class="img-prd-detail col-lg-4 col-md-12 col-sm-12 mt-4">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <img src="./public/img/imgPrd/{{ detail.image }}.jpeg" alt class="w-100 rounded main-image">
-                                </div>
+                    </div>
+                    <div class="product-description m-lg-5 m-md-5 my-4">
+                        <span class="fw-bold">{{ detail.name }}</span>
+                        <p>{{ detail.content }}
+                        </p>
+                    </div>
+                    <div class="card mb-5">
+                        <div class="card-header text-center">
+                            <strong>Bảng Giá Tour</strong>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2"
+                                            class="text-center">Thời
+                                            Gian<br>(Ngày ra sân bay)</th>
+                                        <th scope="col" rowspan="2"
+                                            class="text-center">Chuyến Bay</th>
+                                        <th scope="col" colspan="3"
+                                            class="text-center">GIÁ TOUR TRỌN
+                                            GÓI CHO 1 KHÁCH</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"
+                                            class="text-center">Người Lớn<br>Từ
+                                            10 tuổi trở lên</th>
+                                        <th scope="col" class="text-center">Trẻ
+                                            Em<br>Từ 02 đến dưới 10 tuổi</th>
+                                        <th scope="col" class="text-center">Trẻ
+                                            Nhỏ<br>Dưới 02 tuổi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">04, 11,
+                                            25/4</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">32.900.000</td>
+                                        <td class="text-center">29.600.000</td>
+                                        <td class="text-center">9.870.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">08, 22/05</td>
+                                        <td>VJ828 SGN - KIX 00:10 –
+                                            08:00<br>VJ823 NRT - SGN 08:55 –
+                                            14:00</td>
+                                        <td class="text-center">27.900.000</td>
+                                        <td class="text-center">25.110.000</td>
+                                        <td class="text-center">8.370.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">23, 30/5</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">27.900.000</td>
+                                        <td class="text-center">25.110.000</td>
+                                        <td class="text-center">8.370.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">06, 13,
+                                            20/6</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">27.900.000</td>
+                                        <td class="text-center">25.110.000</td>
+                                        <td class="text-center">8.370.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">27/6</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">28.900.000</td>
+                                        <td class="text-center">26.010.000</td>
+                                        <td class="text-center">8.670.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">04, 11, 18,
+                                            25/7</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">28.900.000</td>
+                                        <td class="text-center">26.010.000</td>
+                                        <td class="text-center">8.670.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">08, 29/8</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">30.900.000</td>
+                                        <td class="text-center">27.810.000</td>
+                                        <td class="text-center">9.270.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">12, 26/9</td>
+                                        <td>VJ822 SGN - NRT 23:20 –
+                                            07:40<br>VJ829 KIX - SGN 09:30 –
+                                            13:30</td>
+                                        <td class="text-center">27.900.000</td>
+                                        <td class="text-center">25.110.000</td>
+                                        <td class="text-center">8.370.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="feed-back">
+                        <h3>Cảm nhận của khách hàng</h3>
+                        <div ng-repeat="item in binhluan | orderBy:'-date' | limitTo:limit" class="row align-items-center border-top border-bottom py-3 my-3">
+                            <div class="col-lg-2 col-md-2 col-sm-2 d-flex">
+                                <img src="./public/img/imgPrivate/avt.jpg"
+                                    class="rounded-circle overflow-hidden object-fit-cover me-3"
+                                    alt="Avatar">
+                                <span class="name-user fw-bold">{{ item.name }}</span>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 d-flex">
-                                    <div ng-repeat="thumbnail in detail.thumbnail" class="col-lg col-md col-sm">
-                                        <img ng-src="./public/img/imgPrd/{{ thumbnail }}.jpeg" alt class="rounded my-1 thumbnail" ng-click="showImage(thumbnail)" style="width: 100%; padding: 2px;"> 
+                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                <div class="rate d-flex align-items-center">
+                                    <i class='bx bxs-star text-warning'></i>
+                                    <i class='bx bxs-star text-warning'></i>
+                                    <i class='bx bxs-star text-warning'></i>
+                                    <i class='bx bxs-star text-warning'></i>
+                                    <i class='bx bxs-star text-warning'></i>
+                                    <div class="date text-secondary ms-auto">
+                                        <i>{{ item.date }}</i>
                                     </div>
                                 </div>
+                                <div class="comment">
+                                    <p class="mb-0">{{ item.content }}</p>
+                                </div>
                             </div>
-                        </div>                        
-                        
-                        <div
-                            class="icon-detail-prd col-lg-4 col-md-12 col-sm-12 mt-4">
-                            <h2 class="text-warning"><b>{{ detail.name }}</b></h2>
-                            <p><i class='bx bx-money text-warning mx-2'></i>Giá:
-                                <b>{{ detail.price }} đ</b></p>
-                            <p><i
-                                    class='bx bx-barcode text-warning mx-2'></i>Mã:
-                                <b>TNA12364-29032024-SD</b></p>
-                            <p><i
-                                    class='bx bxs-plane-take-off text-warning mx-2'></i>Khỏi
-                                hành: <b>{{ detail.start }}</b></p>
-                            <p><i class='bx bx-time text-warning mx-2'></i>Thời
-                                gian: <b>{{ detail.duration }}</b></p>
-                            <p><i
-                                    class='bx bxs-map-pin text-warning mx-2'></i>Khởi
-                                hành từ: <b>TP.HCM</b></p>
-                            <p><i
-                                class='bx bxs-map-pin text-warning mx-2'></i>Vùng: <b>{{ detail.kind }}</b></p>
-                            <p><i
-                                    class='bx bxs-plane text-warning mx-2'></i>Phương
-                                tiện: <b>{{ detail.transport }}</b></p>
-                            <button class="btn btn-warning text-white"><a
-                                    href="./order.html"
-                                    class="text-decoration-none text-white">Đặt
-                                    ngay</a></button>
                         </div>
+
+                        <button ng-click="limit = limit + 5" ng-hide="limit >= binhluan.length" class="btn btn-primary">Xem thêm</button>
+
+
+                        <h3 class="mt-5">Bạn đang nghỉ gì</h3>
+                        <form action class=" mb-5" ng-submit="comment()">
+                            <div class="mb-3">
+                                <label for class="form-label">Nhập bình luận của bạn</label>
+                                <input type="text" class="form-control border-primary"
+                                    placeholder="Nhập bình luận của bạn"
+                                    style="height: 100px;" ng-model="content">
+                            </div>
+                            <div class="mb-3 text-end">
+                                <button class="btn btn-primary" type="submit">Đăng</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="product-description m-lg-5 m-md-5 my-4">
-                    <span class="fw-bold">{{ detail.name }}</span>
-                    <p>{{ detail.content }}
-                    </p>
+
+                <div
+                    class="icon-detail-prd col-lg-3 col-md-12 col-sm-12 p-4 border border-primary h-50 mt-2 mx-lg-5">
+                    <div class="group-info position-sticky">
+                        <h2 class="text-primary"><b>{{ detail.name }}</b></h2>
+                        <p class="border bg-primary text-white py fs-2"><i
+                                class='bx bx-money text-primary mx-2'></i>Giá:
+                            <b>{{ detail.price }} đ</b></p>
+                        <p><i
+                                class='bx bx-barcode text-primary mx-2'></i>Mã:
+                            <b>TNA12364-29032024-SD</b></p>
+                        <p><i
+                                class='bx bxs-plane-take-off text-primary mx-2'></i>Khỏi
+                            hành: <b>{{ detail.start }}</b></p>
+                        <p><i class='bx bx-time text-primary mx-2'></i>Thời
+                            gian: <b>{{ detail.duration }}</b></p>
+                        <p><i
+                                class='bx bxs-map-pin text-primary mx-2'></i>Khởi
+                            hành từ: <b>TP.HCM</b></p>
+                        <p><i
+                                class='bx bxs-map-pin text-primary mx-2'></i>Vùng:
+                            <b>{{ detail.kind }}</b></p>
+                        <p><i
+                                class='bx bxs-plane text-primary mx-2'></i>Phương
+                            tiện: <b>{{ detail.transport }}</b></p>
+                        <button class="btn btn-primary text-white mb-4"><a
+                                href="./order.html"
+                                class="text-decoration-none text-white">Đặt
+                                ngay</a>
+                        </button>
+                    </div>
                 </div>
-                <div class="feed-back">
-                    <div
-                        class="row align-items-center border-top border-bottom py-3 my-3">
-                        <div class="col-lg-2 col-md-2 col-sm-2 d-flex">
-                            <img src="./asset/img/avt.jpg"
-                                class="rounded-circle overflow-hidden object-fit-cover me-3"
-                                alt="Avatar">
-                            <span class="name-user fw-bold">Phạm An</span>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10">
-                            <div class="rate d-flex align-items-center">
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <div class="date text-secondary ms-auto">
-                                    <i>22/12/2023</i>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <p class="mb-0">Dịch vụ thì ok, nhưng mà điểm du
-                                    lịch nằm ở xa, ăn uống ok. Khách sạn tốt</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="row align-items-center border-top border-bottom py-3 my-3">
-                        <div class="col-lg-2 col-md-2 col-sm-2 d-flex">
-                            <img src="./asset/img/avt1.jpg"
-                                class="rounded-circle overflow-hidden object-fit-cover me-3"
-                                alt="Avatar">
-                            <span class="name-user fw-bold">An Phạm</span>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10">
-                            <div class="rate d-flex align-items-center">
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <div class="date text-secondary ms-auto">
-                                    <i>22/12/2023</i>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <p class="mb-0">Chuyến du lịch này thật sự tuyệt
-                                    vời! Tôi đã có cơ hội khám phá những địa
-                                    điểm đẹp và thú vị, từ những ngôi đền cổ
-                                    kính đến những bãi biển tuyệt đẹp. Điều
-                                    tuyệt vời nhất là được thưởng thức các món
-                                    ăn địa phương ngon lành và trải nghiệm văn
-                                    hóa độc đáo của đất nước này</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="row align-items-center border-top border-bottom py-3 my-3">
-                        <div class="col-lg-2 col-md-2 col-sm-2 d-flex">
-                            <img src="./asset/img/avt2.jpg"
-                                class="rounded-circle overflow-hidden object-fit-cover me-3"
-                                alt="Avatar">
-                            <span class="name-user fw-bold">Phạm Ngọc Bảo
-                                An</span>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10">
-                            <div class="rate d-flex align-items-center">
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <div class="date text-secondary ms-auto">
-                                    <i>22/12/2023</i>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <p class="mb-0">Chuyến du lịch này đã mang lại
-                                    cho tôi những trải nghiệm tuyệt vời mà tôi
-                                    sẽ không bao giờ quên. Tôi đã gặp được những
-                                    người bạn mới và học hỏi được rất nhiều về
-                                    lịch sử và văn hóa của đất nước này. Cảm
-                                    giác thư giãn và hạnh phúc khi được khám phá
-                                    những điều mới mẻ là điều không thể diễn
-                                    tả.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="row align-items-center border-top border-bottom py-3 my-3">
-                        <div class="col-lg-2 col-md-2 col-sm-2 d-flex">
-                            <img src="./asset/img/avt4.jpg"
-                                class="rounded-circle overflow-hidden object-fit-cover me-3"
-                                alt="Avatar">
-                            <span class="name-user fw-bold">Bảo An</span>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10">
-                            <div class="rate d-flex align-items-center">
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <i class='bx bxs-star text-warning'></i>
-                                <div class="date text-secondary ms-auto">
-                                    <i>22/12/2023</i>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <p class="mb-0">Chuyến du lịch này đã mang lại
-                                    cho tôi những kỷ niệm đẹp đẽ và ý nghĩa. Tôi
-                                    đã có cơ hội được tham quan những danh lam
-                                    thắng cảnh tuyệt vời và thưởng thức ẩm thực
-                                    độc đáo của đất nước này. Cảm giác hồi hộp
-                                    và phấn khích khi đặt chân đến những địa
-                                    điểm mới là điều không thể quên được.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="mt-5">Bạn đang nghỉ gì</h3>
-                    <form id="commentForm" class>
-                        <p>Phạm An</p>
-                        <p>Anltweb79@gmail.com</p>
-                        <div class="mb-3">
-                            <label for="commentInput" class="form-label">Your
-                                Comment:</label>
-                            <textarea class="form-control" id="commentInput"
-                                rows="4"
-                                placeholder="Enter your comment"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14097.637128411518!2d109.58266025204448!3d27.950749166698746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36982aeb56507fab%3A0x744cb83d7b9e1626!2zVHVvamlhbmcsIEZlbmdodWFuZywgUGjGsOG7o25nIEhvw6BuZywgVMawxqFuZyBUw6J5LCBI4buTIE5hbSwgVHJ1bmcgUXXhu5FjLCA0MTYyOTk!5e0!3m2!1svi!2s!4v1710079843692!5m2!1svi!2s"
-                    width="600" height="450" style="border:0;" allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="w-100 my-4"></iframe>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
-        <script>
-            var app = angular.module('myApp', []);
-            
-            app.controller('YourController', function($scope, $interval) {
-                $scope.currentIndex = 0;
-                $scope.mainImage = './public/img/imgPrd/{{ detail.image }}.jpeg';
-                
-                $scope.images = [
-                    './public/img/imgPrd/{{ detail.image }}.jpeg',
-                    './public/img/imgPrd/{{ detail.thumbnail[0] }}.jpeg',
-                    './public/img/imgPrd/{{ detail.thumbnail[1] }}.jpeg',
-                    './public/img/imgPrd/{{ detail.thumbnail[2] }}.jpeg'
-                ];
-            
-                $scope.showImage = function(image) {
-                    $scope.mainImage = image;
-                    $scope.currentIndex = $scope.images.indexOf(image);
-                };
-            
-                $interval(function() {
-                    $scope.currentIndex = ($scope.currentIndex + 1) % $scope.images.length;
-                    $scope.mainImage = $scope.images[$scope.currentIndex];
-                }, 3000);
-            });
-        </script>
-        <script
-            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14097.637128411518!2d109.58266025204448!3d27.950749166698746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36982aeb56507fab%3A0x744cb83d7b9e1626!2zVHVvamlhbmcsIEZlbmdodWFuZywgUGjGsOG7o25nIEhvw6BuZywgVMawxqFuZyBUw6J5LCBI4buTIE5hbSwgVHJ1bmcgUXXhu5FjLCA0MTYyOTk!5e0!3m2!1svi!2s!4v1710079843692!5m2!1svi!2s"
+            width="600" height="450" style="border:0;" allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-100 my-4"></iframe>
+    </div>
+</div>

@@ -1,45 +1,38 @@
 <div class="container">
-    <h1 class="my-5 text-warning">Những địa điểm du lịch khác</h1>
+    <h1 class="my-5 text-primary">Những địa điểm du lịch khác</h1>
     <div class="row">
         <div class="category col-lg-3 col-md-12 col-sm-12">
-            <div class="col-md-12">
-                <h5>Danh mục tour du lịch</h5>
-                <ul class="list-group">
-                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('default')">Mặc định</li>
-                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('international')">Quốc tế</li>
-                    <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('domestic')">Trong nước</li>
-                </ul>
-            </div>            
-            <div class="col-md-12 mt-3">
-                <h5>Thanh lọc</h5>
-                <div class="btn-group d-flex flex-wrap" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
-                    <label class="btn btn-outline-primary m-1" for="option1">Tất cả</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                    <label class="btn btn-outline-primary m-1" for="option2">miền Name</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                    <label class="btn btn-outline-primary m-1" for="option3">miền Bắc</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                    <label class="btn btn-outline-primary m-1" for="option4">miền Trung</label>
-
-                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
-                    <label class="btn btn-outline-primary m-1" for="option5">Nước ngoài</label>
+            <div class="sticky-product-page position-sticky top-0">
+                <div class="col-md-12">
+                    <h5>Danh mục tour du lịch</h5>
+                    <ul class="list-group">
+                        <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('default')">Mặc định</li>
+                        <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('international')">Quốc tế
+                        </li>
+                        <li style="cursor: pointer;" class="list-group-item" ng-click="sortkind('domestic')">Trong nước</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-md-12 mt-3">
-                <h5>Lọc theo giá</h5>
-                <div class="input-group">
-                    <span class="input-group-text">Từ:</span>
-                    <input type="text" class="form-control" placeholder="VNĐ">
+    
+                <div class="col-md-12 mt-3">
+                    <h5>Thanh lọc</h5>
+                    <div class="btn-group d-flex flex-wrap" role="group" aria-label="Basic radio toggle button group">
+                        <button class="m-1 btn btn-primary" ng-click="priceDesc()">Giá giảm dần</button>
+                        <button class="m-1 btn btn-primary" ng-click="priceAsc()">Giá tăng dần</button>
+                    </div>
                 </div>
-                <div class="input-group mt-2">
-                    <span class="input-group-text">Đến:</span>
-                    <input type="text" class="form-control" placeholder="VNĐ">
+                           
+                <div class="col-md-12 mt-3">
+                    <h5>Lọc theo giá</h5>
+                    <div class="input-group">
+                        <span class="input-group-text">Từ:</span>
+                        <input type="number" class="form-control" placeholder="VNĐ" ng-model="minPrice">
+                    </div>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text">Đến:</span>
+                        <input type="number" class="form-control" placeholder="VNĐ" ng-model="maxPrice">
+                    </div>
+                    <button class="btn btn-primary mt-3" ng-click="applyFilterPrice()">Áp dụng</button>
                 </div>
-                <button class="btn btn-primary mt-3">Áp dụng</button>
             </div>
         </div>
         <div class="product-list col-lg-8 col-md-12 col-sm-12">
@@ -49,26 +42,29 @@
                 </div>
             </div>
             <div class="row">
-                <div ng-repeat="tour in products | limitTo: productPerPage : begin | filter: { name: search }" class="col-lg-4 col-md-6 col-sm-12 box box-product">
+                <div ng-repeat="tour in products | filter: { name: search }  | orderBy : sort | limitTo: productPerPage : begin "
+                    class="col-lg-4 col-md-6 col-sm-12 box box-product">
                     <div class="image-container position-relative mt-3">
-                        <img src="./public/img/imgPrd/{{ tour.image }}.jpeg" alt
-                            class="img-fluid rounded" style="height: 200px; width: 100%;">
+                        <img src="./public/img/imgPrd/{{ tour.image }}.jpeg" alt class="img-fluid rounded"
+                            style="height: 200px; width: 100%;">
                         <div class="overlay rounded position-absolute">
-                            <div
-                                class="z-3 button position-absolute  top-50 start-50 translate-middle">
-                                <button class="btn btn-warning"><a href ="#!detail/{{ tour.id }}"
+                            <div class="z-3 button position-absolute  top-50 start-50 translate-middle">
+                                <button class="btn btn-primary"><a href="#!detail/{{ tour.id }}"
                                         class="text-decoration-none text-white"><i class='bx bxs-show'></i></i>Xem
                                         thêm</a></button>
-                                <button class="btn bg-transparance border-warning mt-2" style="transform: translateX(18px);">
-                                    <a href = "./detail.html" class="text-decoration-none text-white">Thêm vào giỏ</a>
+                                <button class="btn bg-transparance border-primary mt-2"
+                                    style="transform: translateX(18px);">
+                                    <a href="./detail.html" class="text-decoration-none text-white">Thêm vào giỏ</a>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <p class="my-3">{{ tour.name }}</p>
                     <div class="group d-flex justify-content-between">
-                        <span><i class='bx bxs-purchase-tag-alt px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.price }} VND</span>
-                        <span><i class='bx bxs-calendar px-1 text-warning' style="transform: translateY(1px);"></i>{{ tour.start }}</span>
+                        <span><i class='bx bxs-purchase-tag-alt px-1 text-primary'
+                                style="transform: translateY(1px);"></i>{{ tour.price }} VND</span>
+                        <span><i class='bx bxs-calendar px-1 text-primary' style="transform: translateY(1px);"></i>{{
+                            tour.start }}</span>
                     </div>
                 </div>
             </div>

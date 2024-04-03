@@ -6,7 +6,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "danang",
-      "thumbnail": ["dannang1", "dannang2", "dannang3"],
+      "thumbnail": [
+        "dannang1",
+        "dannang2",
+        "dannang3"
+      ],
       "price": 5900000,
       "sale": 4900000,
       "duration": "4 ngày 3 đêm",
@@ -21,7 +25,11 @@
       "hot": 1,
       "kind": "trong nước",
       "image": "halong",
-      "thumbnail": ["halong1", "halong2", "halong3"],
+      "thumbnail": [
+        "halong1",
+        "halong2",
+        "halong3"
+      ],
       "price": 6900000,
       "sale": 5900000,
       "duration": "3 ngày 2 đêm",
@@ -36,7 +44,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "nhatrang",
-      "thumbnail": ["nhatrang1", "nhatrang2", "nhatrang3"],
+      "thumbnail": [
+        "nhatrang1",
+        "nhatrang2",
+        "nhatrang3"
+      ],
       "price": 5900000,
       "sale": 4900000,
       "duration": "4 ngày 3 đêm",
@@ -51,7 +63,11 @@
       "hot": 1,
       "kind": "trong nước",
       "image": "phuquoc",
-      "thumbnail": ["phuquoc1", "phuquoc2", "phuquoc3"],
+      "thumbnail": [
+        "phuquoc1",
+        "phuquoc2",
+        "phuquoc3"
+      ],
       "price": 4900000,
       "sale": 3900000,
       "duration": "3 ngày 2 đêm",
@@ -66,7 +82,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "phanthiet",
-      "thumbnail": ["phanthiet1", "phanthiet2", "phanthiet3"],
+      "thumbnail": [
+        "phanthiet1",
+        "phanthiet2",
+        "phanthiet3"
+      ],
       "price": 3900000,
       "sale": 2900000,
       "duration": "4 ngày 3 đêm",
@@ -81,7 +101,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "phuquy",
-      "thumbnail": ["phuquy1", "phuquy2", "phuquy3"],
+      "thumbnail": [
+        "phuquy1",
+        "phuquy2",
+        "phuquy3"
+      ],
       "price": 4900000,
       "sale": 3900000,
       "duration": "4 ngày 3 đêm",
@@ -96,7 +120,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "ninhchu",
-      "thumbnail": ["ninhchu1", "ninhchu2", "ninhchu3"],
+      "thumbnail": [
+        "ninhchu1",
+        "ninhchu2",
+        "ninhchu3"
+      ],
       "price": 3900000,
       "sale": 2900000,
       "duration": "3 ngày 2 đêm",
@@ -111,7 +139,11 @@
       "hot": 0,
       "kind": "trong nước",
       "image": "dalat",
-      "thumbnail": ["dalat1", "dalat2", "dalat3"],
+      "thumbnail": [
+        "dalat1",
+        "dalat2",
+        "dalat3"
+      ],
       "price": 3900000,
       "sale": 3200000,
       "duration": "5 ngày 4 đêm",
@@ -126,7 +158,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "campuchia",
-      "thumbnail": ["campuchia1", "campuchia2", "campuchia3"],
+      "thumbnail": [
+        "campuchia1",
+        "campuchia2",
+        "campuchia3"
+      ],
       "price": 5900000,
       "sale": 4900000,
       "duration": "4 ngày 3 đêm",
@@ -141,7 +177,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "thailan",
-      "thumbnail": ["thailan1", "thailan2", "thailan3"],
+      "thumbnail": [
+        "thailan1",
+        "thailan2",
+        "thailan3"
+      ],
       "price": 5900000,
       "sale": 4900000,
       "duration": "4 ngày 3 đêm",
@@ -156,7 +196,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "nhatban",
-      "thumbnail": ["nhatban1", "nhatban1", "nhatban"],
+      "thumbnail": [
+        "nhatban1",
+        "nhatban1",
+        "nhatban"
+      ],
       "price": 5900000,
       "sale": 4900000,
       "duration": "6 ngày 5 đêm",
@@ -171,7 +215,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "singapore",
-      "thumbnail": ["singapore1", "singapore2", "singapore3"],
+      "thumbnail": [
+        "singapore1",
+        "singapore2",
+        "singapore3"
+      ],
       "price": 9900000,
       "sale": 8900000,
       "duration": "5 ngày 4 đêm",
@@ -186,7 +234,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "malaysia",
-      "thumbnail": ["malaysia1", "malaysia2", "malaysia3"],
+      "thumbnail": [
+        "malaysia1",
+        "malaysia2",
+        "malaysia3"
+      ],
       "price": 8900000,
       "sale": 7900000,
       "duration": "4 ngày 3 đêm",
@@ -201,7 +253,11 @@
       "hot": 1,
       "kind": "quốc tế",
       "image": "hanquoc",
-      "thumbnail": ["hanquoc1", "hanquoc2", "hanquoc3"],
+      "thumbnail": [
+        "hanquoc1",
+        "hanquoc2",
+        "hanquoc3"
+      ],
       "price": 270000000,
       "sale": 23000000,
       "duration": "5 ngày 4 đêm",
@@ -216,7 +272,11 @@
       "hot": 0,
       "kind": "quốc tế",
       "image": "trungquoc",
-      "thumbnail": ["trungquoc1", "trungquoc2", "trungquoc3"],
+      "thumbnail": [
+        "trungquoc1",
+        "trungquoc2",
+        "trungquoc3"
+      ],
       "price": 12000000,
       "sale": 11000000,
       "duration": "4 ngày 3 đêm",
@@ -231,7 +291,11 @@
       "hot": 1,
       "kind": "quốc tế",
       "image": "chauau",
-      "thumbnail": ["chauau1", "chauau2", "chauau3"],
+      "thumbnail": [
+        "chauau1",
+        "chauau2",
+        "chauau3"
+      ],
       "price": 35000000,
       "sale": 32000000,
       "duration": "9 ngày 8 đêm",
@@ -265,6 +329,64 @@
       "title": "Phượt qua những cung đường ngoạn mục ở Iceland",
       "image": "chauau1",
       "description": "Iceland, với cảnh quan thiên nhiên hoang sơ và hùng vĩ, là điểm đến lý tưởng cho những ai yêu thích sự phiêu lưu và khám phá. Hãy trải nghiệm cảm giác thú vị khi lái xe qua các con đường đèo, ngắm nhìn những hồ nước biển lấp lánh và tham gia vào các hoạt động như đi bộ đường dài, chèo kayak trên biển và ngắm cảnh bắt nguồn từ những dãy núi băng tuyết."
+    }
+  ],
+  "comments": [
+    {
+      "id": "e6bb",
+      "idNews": "3",
+      "content": "dịch vụ du lịch tốt, các bạn nên thử trãi nghiệm nhé",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:30:08"
+    },
+    {
+      "id": "b7ed",
+      "idNews": "1",
+      "content": "dịch vụ tạm được",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:30:48"
+    },
+    {
+      "id": "15d7",
+      "idNews": "1",
+      "content": "dịch vụ hơi tệ",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:30:54"
+    },
+    {
+      "id": "bd90",
+      "idNews": "1",
+      "content": "mắc quá",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:31:01"
+    },
+    {
+      "id": "7308",
+      "idNews": "1",
+      "content": "dịch vụ khá tốt các bạn nên thử nhé",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:31:25"
+    },
+    {
+      "id": "8135",
+      "idNews": "1",
+      "content": "dịch vụ tệ",
+      "name": "Phạm An",
+      "idUser": "1",
+      "date": "2024-04-03 22:31:32"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Phạm An",
+      "email": "Anpnb79@gmail.com",
+      "password": "an123"
     }
   ]
 }

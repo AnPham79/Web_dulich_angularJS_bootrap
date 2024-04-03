@@ -47,8 +47,11 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item nav-item-primary">
-                            <a class="nav-link" href="./Auth/login.html">Đăng
-                                nhập</a>
+                            <a class="nav-link" ng-if="!users.name" href="#!login">Đăng nhập</a>
+                            <a class="nav-link" href ng-if="users.name" ng-click="logout()" >Hi {{ users.name }} đăng xuất</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-if="!users.name" href="#!contact">Đăng kí</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./cart.html"><i class='bx bxs-cart fs-3'></i></a>
@@ -120,5 +123,6 @@
         <script src="./controllers/homeCtrl.js"></script>
         <script src="./controllers/detailCtrl.js"></script>
         <script src="./controllers/productCtrl.js"></script>
+        <script src="./controllers/loginCtrl.js"></script>
     </body>
 </html>

@@ -96,3 +96,11 @@
 .social i {
     font-size: 24px;
 }
+
+/* --------------------- cái thanh meu ở trang sản phẩm đi theo */
+.icon-detail-prd {
+    position: sticky;
+    top: 20px; /* Adjust this value based on your layout */
+    height: 100vh; /* This ensures the element takes the full height of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+}
