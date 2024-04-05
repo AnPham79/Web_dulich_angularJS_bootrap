@@ -1,215 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
-        <link rel="stylesheet"
-            href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
-    </head>
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid py-3">
-                    <a class="navbar-brand fw-bold fs-2" href="./index.html">
-                        <i class='bx bxs-tree'></i>TRAVEL</a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse"
-                        id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                    aria-current="page"
-                                    href="./index.html">Trang chủ</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"
-                                    href="#"
-                                    role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Tour
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch Miền Bắc</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch nước ngoài</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền trung</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền nam</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">Giới
-                                    thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Liên
-                                    hệ</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item nav-item-primary">
-                                <a class="nav-link" href="./Auth/login.html">Đăng
-                                    nhập</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./cart.html"><i class='bx bxs-cart fs-3'></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <img id="tourImage" src="./asset/prd/trungquoc2.jpg"
-                        class="w-100" alt="Tour Image">
-                </div>
-                <div class="col-lg-8 col-md-12 col-sm-12">
-                    <table class="table">
-                        <tr>
-                            <th colspan="2">Chi tiết tour</th>
-                        </tr>
-                        <tr>
-                            <td>Tên chuyến</td>
-                            <td id="tourName">Chuyến du lịch Trung Quốc</td>
-                        </tr>
-                        <tr>
-                            <td>Thời gian</td>
-                            <td id="tourTime">7 ngày 6 đêm</td>
-                        </tr>
-                        <tr>
-                            <td>Phương tiện</td>
-                            <td id="tourTransport">Máy bay</td>
-                        </tr>
-                        <tr>
-                            <td>Số vé</td>
-                            <td>
-                                <button class="btn btn-sm border-warning border"
-                                    onclick="decreaseTicket()">-</button>
-                                <span id="ticketCount">1</span>
-                                <button class="btn btn-sm  border-warning border"
-                                    onclick="increaseTicket()">+</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Giá ban đầu</td>
-                            <td id="initialPrice">7,000,000 VND</td>
-                        </tr>
-                        <tr>
-                            <td>Tổng giá</td>
-                            <td id="totalPrice">7,000,000 VND</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <h4 class="mt-2 text-warning text-center">Thông tin khách hàng</h4>
-            <form action="/submit_booking_info" method="post">
-                <div class="mb-3">
-                    <label for="fullname" class="form-label">Họ và tên</label>
-                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Nhập địa chỉ email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Số điện thoại</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
-                </div>
-                <div class="mb-3">
-                    <label for="address" class="form-label">Địa chỉ</label>
-                    <textarea class="form-control" id="address" name="address" rows="3" placeholder="Nhập địa chỉ của bạn" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Xác nhận đặt vé</button>
-            </form>
-            
+<div class="container">
+    <h4 class="mt-2 text-warning text-center">Thông tin khách hàng</h4>
+    <form action="/submit_booking_info" method="post">
+        <div class="mb-3">
+            <label for="fullname" class="form-label">Họ và tên</label>
+            <input ng-model="users.name" type="text" class="form-control"
+                id="fullname" name="fullname" placeholder="Nhập họ và tên"
+                required>
         </div>
-        <div class="footer mt-5 bg-dark text-white pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <a class="navbar-brand fw-bold fs-2 text-white"
-                            href="#">
-                            <i class='bx bxs-tree'></i>TRAVEL</a>
-                        <p>
-                            Chào mừng bạn đến với trang web du lịch, nơi bạn có
-                            thể khám phá những điểm đến tuyệt vời trên khắp thế
-                            giới và lập kế hoạch cho những cuộc phiêu lưu đáng
-                            nhớ.
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Giới thiệu</h5>
-                        <p>Về chúng tôi</p>
-                        <p><i class='bx bx-chevron-right'></i>Thỏa thuận sử
-                            dụng</p>
-                        <p><i class='bx bx-chevron-right'></i>Quy chế hoạt
-                            động</p>
-                        <p><i class='bx bx-chevron-right'></i>Chính sách bảo
-                            mật</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Danh mục</h5>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Bắc</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Trung</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Nam</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch nước
-                            ngoài</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Hỗ trợ</h5>
-                        <p><i class='bx bx-chevron-right'></i>Góp ý</p>
-                        <p><i class='bx bx-chevron-right'></i>Sale & service</p>
-                        <p><i class='bx bx-chevron-right'></i>Rạp / giá vé</p>
-                        <p><i class='bx bx-chevron-right'></i>Tuyển dụng</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container border-top py-2">
-                <p class="text-center mb-0"> <i class='bx bx-copyright'></i>
-                    Copyright and created by Phạm Ngọc Bảo An
-                </p>
-            </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input ng-model="users.email" type="email" class="form-control"
+                id="email" name="email" placeholder="Nhập địa chỉ email"
+                required>
         </div>
-        <script
-            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-                let ticketCount = 1;
-                const initialPrice = 7000000;
-            
-                function updateTotalPrice() {
-                    const totalPrice = ticketCount * initialPrice;
-                    document.getElementById("totalPrice").innerText = totalPrice.toLocaleString('en-US') + " VND";
-                }
-            
-                function increaseTicket() {
-                    ticketCount++;
-                    document.getElementById("ticketCount").innerText = ticketCount;
-                    updateTotalPrice();
-                }
-            
-                function decreaseTicket() {
-                    if (ticketCount > 1) {
-                        ticketCount--;
-                        document.getElementById("ticketCount").innerText = ticketCount;
-                        updateTotalPrice();
-                    }
-                }
-            </script>
-    </body>
-</html>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input ng-model="users.phone" type="tel" class="form-control"
+                id="phone" name="phone" placeholder="Nhập số điện thoại"
+                required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Địa chỉ</label>
+            <input ng-model="users.address" type="text" class="form-control"
+                id="address" name="address" placeholder="Nhập địa chỉ của bạn"
+                required>
+        </div>
+        <div class="mb-3">
+            <label for="province" class="form-label">Tỉnh/Thành phố</label>
+            <select class="form-control" ng-model="tinh" name="tinh"
+                ng-options="tinh.Name for tinh in tatcatinh" required>
+                <option value disabled selected> -- Chọn Tỉnh/Thành phố
+                    --</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="district" class="form-label">Quận/Huyện</label>
+            <select class="form-select" id="district" name="district"
+                ng-options="huyen.Name for huyen in tinh.Districts"
+                ng-model="huyen">
+                <option value disabled selected> -- Chọn Quận/Huyện --</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="ward" class="form-label">Phường/Xã</label>
+            <select class="form-select" id="ward" name="ward"
+                ng-options="xa.Name for xa in huyen.Wards" ng-model="xa">
+                <option value disabled selected> -- Chọn Phường/Xã --</option>
+            </select>
+        </div>
+    </form>
+</div>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Đơn hàng của bạn</h5>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ảnh</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in cart">
+                        <td>{{$index+1}}</td>
+                        <td><img class="w-50" src="./public/img/imgPrd/{{ item.image }}.jpeg" alt=""></td>
+                        <td>{{ item.name }}</td>
+                        <td><input type="number" style="width: 70px;"
+                                class="form-control" ng-model="item.quantity"
+                                ng-change="saveCart()"></td>
+                        <td>{{ item.price * item.quantity | number }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="my-5 total-price-order">
+        <h1>Tổng tiền: {{ tinhtong() | number }}</h1>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="actionOrder()">Xác nhận đặt vé</button>
+</div>

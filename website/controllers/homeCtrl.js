@@ -1,4 +1,4 @@
-app.controller("homeCtrl", function ($scope, $http) {
+app.controller("homeCtrl", function ($scope, $http, $rootScope) {
   // load thêm sản phẩm theo limit
   $scope.limit = 8;
   $scope.loadProduct = "Xem thêm";
@@ -22,8 +22,8 @@ app.controller("homeCtrl", function ($scope, $http) {
     });
     $scope.selectedTour = selectedTour;
 
-    if(!$scope.selectedTour) {
-        alert("Bạn chưa chọn tour nào");
+    if (!$scope.selectedTour) {
+      alert("Bạn chưa chọn tour nào");
     }
   };
 

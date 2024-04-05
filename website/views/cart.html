@@ -1,197 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./node_modules/bootrap.min.css">
-        <link rel="stylesheet"
-            href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
-            rel='stylesheet'>
-    </head>
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid py-3">
-                    <a class="navbar-brand fw-bold fs-2" href="./index.html">
-                        <i class='bx bxs-tree'></i>TRAVEL</a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+<div class="container mt-4">
+    <div ng-show="cart && cart.length > 0" class="row">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Giỏ hàng</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tên</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in cart">
+                                <td>{{$index+1}}</td>
+                                <td>{{ item.name }}</td>
+                                <td><input type="number" style="width: 70px;" class="form-control" ng-model="item.quantity" ng-change="saveCart()"></td>
+                                <td>{{ item.price * item.quantity }}</td>
+                                <td><button class="btn border border-danger" ng-click="delete($index)"><i class='bx bxs-trash text-danger'></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mt-lg-0 mt-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Hóa đơn</h5>
+                </div>
+                <div class="card-body">
+                    <div class="bill-info">
+                        <span class="bill-label">Tổng tiền:</span>
+                        <span class="bill-total">{{ tinhtong() }}</span>
+                    </div>
+                    <div class="btn-delete-all">
+                        <button class="btn border border-danger mt-2" ng-click="deleteAll()">Xóa hết</button>
+                    </div>
+                    <button ng-hide="!users.name" type="button" class="btn btn-primary mt-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#!order" class="text-white text-decoration-none">Thanh toán</a>
                     </button>
-                    <div class="collapse navbar-collapse"
-                        id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                    aria-current="page"
-                                    href="./index.html">Trang chủ</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"
-                                    href="#"
-                                    role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Tour
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch Miền Bắc</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch nước ngoài</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền trung</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Du lịch miền nam</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">Giới
-                                    thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Liên
-                                    hệ</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item nav-item-primary">
-                                <a class="nav-link"
-                                    href="./Auth/login.html">Đăng
-                                    nhập</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./cart.html"><i
-                                        class='bx bxs-cart fs-3'></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="container">
-                <div class="row mt-4">
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h5 class="mb-0">Giỏ hàng</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="product-item">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6">
-                                            <div class="product-image">
-                                                <img
-                                                    src="./asset/prd/trungquoc2.jpg"
-                                                    alt class="w-100">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="product-info">
-                                                <h5 class="product-name">Tour du
-                                                    lịch Trung Quốc 3 ngày 2
-                                                    đêm</h5>
-                                                <span
-                                                    class="product-price">3.000.000
-                                                    VND</span>
-                                                <div
-                                                    class="product-actions mt-3">
-                                                    <button
-                                                        class="btn btn-outline-primary me-2">+</button>
-                                                    <span
-                                                        class="product-quantity">1</span>
-                                                    <button
-                                                        class="btn btn-outline-primary ms-2">-</button>
-                                                    <button
-                                                        class="btn btn-outline-danger ms-2">Xóa</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h5 class="mb-0">Hóa đơn</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="bill-info">
-                                    <span class="bill-label">Tổng tiền:</span>
-                                    <span class="bill-total">3.000.000
-                                        VND</span>
-                                </div>
-                                <button type="button"
-                                    class="btn btn-success mt-3 w-100"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    <a href="./order.html"
-                                        class="text-white text-decoration-none">Thanh
-                                        toán sản phẩm</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <span ng-show="!users.name"><a href="#!login">Đăng nhập tại đây để thanh toán nhé</a></span>
                 </div>
             </div>
         </div>
-        <div class="footer mt-5 bg-dark text-white pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <a class="navbar-brand fw-bold fs-2 text-white"
-                            href="#">
-                            <i class='bx bxs-tree'></i>TRAVEL</a>
-                        <p>
-                            Chào mừng bạn đến với trang web du lịch, nơi bạn có
-                            thể khám phá những điểm đến tuyệt vời trên khắp thế
-                            giới và lập kế hoạch cho những cuộc phiêu lưu đáng
-                            nhớ.
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Giới thiệu</h5>
-                        <p>Về chúng tôi</p>
-                        <p><i class='bx bx-chevron-right'></i>Thỏa thuận sử
-                            dụng</p>
-                        <p><i class='bx bx-chevron-right'></i>Quy chế hoạt
-                            động</p>
-                        <p><i class='bx bx-chevron-right'></i>Chính sách bảo
-                            mật</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Danh mục</h5>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Bắc</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Trung</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch miền
-                            Nam</p>
-                        <p><i class='bx bx-chevron-right'></i>Du lịch nước
-                            ngoài</p>
-                    </div>
-                    <div class="col-md-6 col-lg-3 col-sm-6">
-                        <h5>Hỗ trợ</h5>
-                        <p><i class='bx bx-chevron-right'></i>Góp ý</p>
-                        <p><i class='bx bx-chevron-right'></i>Sale & service</p>
-                        <p><i class='bx bx-chevron-right'></i>Rạp / giá vé</p>
-                        <p><i class='bx bx-chevron-right'></i>Tuyển dụng</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container border-top py-2">
-                <p class="text-center mb-0"> <i class='bx bx-copyright'></i>
-                    Copyright and created by Phạm Ngọc Bảo An
-                </p>
-            </div>
-        </div>
-        <script
-            src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+    </div>
+    <div ng-show="!cart || cart.length === 0" class="cart-empty d-flex justify-content-center">
+        <img class="w-50" src="./public/img/imgPrivate/cart-empty.jpg" alt="">
+    </div>
+</div>

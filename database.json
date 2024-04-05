@@ -379,14 +379,26 @@
       "name": "Phạm An",
       "idUser": "1",
       "date": "2024-04-03 22:31:32"
+    },
+    {
+      "id": "4b63",
+      "idNews": "3",
+      "content": "như db",
+      "date": "2024-04-04 13:44:28"
     }
   ],
   "users": [
     {
-      "id": "1",
-      "name": "Phạm An",
+      "id": "2858",
+      "name": "An Phạm",
       "email": "Anpnb79@gmail.com",
-      "password": "an123"
+      "password": "thienha10",
+      "phone": "0927553664",
+      "address": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "role": 1
     }
+  ],
+  "orders": [
+    
   ]
 }

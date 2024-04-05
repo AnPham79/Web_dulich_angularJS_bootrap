@@ -23,6 +23,18 @@ app.config(function($routeProvider) {
         templateUrl: 'views/login.html',
         controller: 'loginCtrl',
     })
+    .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'registerCtrl',
+    })
+    .when('/cart', {
+        templateUrl: 'views/cart.html',
+        controller: 'cartCtrl',
+    })
+    .when('/order', {
+        templateUrl: 'views/order.html',
+        controller: 'orderCtrl',
+    })
     .otherwise({
         template : "404 không tìm thấy file"
     });

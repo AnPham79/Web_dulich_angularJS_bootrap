@@ -1,34 +1,80 @@
-<div class="container my-5 d-flex justify-content-center align-items-center">
-    <form class="border border-primary" ng-submit="login()" style="width: 300px; box-shadow: rgba(0, 123, 255, 0.4) 5px 5px, rgba(0, 123, 255, 0.3) 10px 10px, rgba(0, 123, 255, 0.2) 15px 15px, rgba(0, 123, 255, 0.1) 20px 20px, rgba(0, 123, 255, 0.05) 25px 25px; padding: 20px;">
-        <div ng-show="isErorr" class="alert alert-danger">
-            <p>Đăng nhập không thành công !!!</p>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control border-0" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="email" style="border-radius: 5px;">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <div class="input-group">
-                <input type="password" class="form-control border-0" id="exampleInputPassword1" ng-model="password" style="border-radius: 5px;">
-                <button class="btn btn-outline-secondary border-0" type="button" id="togglePassword">Hiện</button>
+<style>
+    html, body {
+        height: 100%;
+
+    }
+
+    body {
+        background-image: url('./public/img/imgPrivate/bannerauth.jpg');
+    }
+</style>
+<body class="h-100">
+    <div
+        class="container d-flex justify-content-center align-items-center h-100 mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card p-4">
+                <div class="card-header">
+                    <h4 class="text-center">Đăng Nhập</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" ng-submit="login()" name="formLogin">
+                        <div ng-show="isErorr" class="alert alert-danger">
+                            <p>Đăng nhập không thành công !!!</p>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"
+                                ng-model="email"
+                                class="form-control" required>
+                                <span class="text-danger" ng-show="formLogin.email.$invalid && formLogin.email.$touched">
+                                    Bạn chưa nhập Email
+                                </span>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password:</label>
+                            <div class="input-group">
+                                <input type="password" id="password"
+                                    name="password" class="form-control"
+                                 ng-model="password" required>
+                                <div class="input-group-append">
+                                    <button
+                                        class="btn btn-outline-secondary"
+                                        type="button" id="togglePassword">
+                                        hiện
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="text-danger" ng-show="formLogin.password.$invalid && formLogin.password.$touched">
+                                Bạn chưa nhập Mật khẩu
+                            </span>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-primary mt-3 text-white w-100">Đăng nhập</button>
+                        <p class="text-center pt-4">Bạn chưa có tài khoản ?</p>
+                        <button
+                            class="btn border-primary btn-transparence mt-3 text-white w-100"><a
+                                class="text-decoration-none text-pribtn-primary"
+                                href="#!register">Đăng kí</a>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-    </form>
-</div>
+    </div>
+    <script
+        src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
 
-<script>
-    const togglePassword = document.getElementById('togglePassword');
-    const password = document.getElementById('exampleInputPassword1');
-
-    togglePassword.addEventListener('click', function() {
-        if (password.type === 'password') {
-            password.type = 'text';
-            togglePassword.textContent = 'Ẩn';
-        } else {
-            password.type = 'password';
-            togglePassword.textContent = 'Hiện';
-        }
-    });
-</script>
+        togglePassword.addEventListener('click', function() {
+            if (password.type === 'password') {
+                password.type = 'text';
+                togglePassword.textContent = 'Ẩn';
+            } else {
+                password.type = 'password';
+                togglePassword.textContent = 'Hiện';
+            }
+        });
+    </script>
+</body>

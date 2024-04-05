@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="./public/css/bootstrap.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
         <link rel="stylesheet" href="./public/css/main.css">
     </head>
     <body ng-controller="mainCtrl">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="z-3 navbar navbar-expand-lg bg-body-tertiary">
             <div class="container py-3">
                 <a class="navbar-brand fw-bold fs-2" href="./index.html">
                     <i class='bx bxs-tree'></i>TRAVEL</a>
@@ -47,14 +48,19 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item nav-item-primary">
-                            <a class="nav-link" ng-if="!users.name" href="#!login">Đăng nhập</a>
-                            <a class="nav-link" href ng-if="users.name" ng-click="logout()" >Hi {{ users.name }} đăng xuất</a>
+                            <a class="nav-link" ng-if="!users.name"
+                                href="#!login">Đăng nhập</a>
+                            <a class="nav-link" href ng-if="users.name"
+                                ng-click="logout()">Hi {{ users.name }} đăng
+                                xuất</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" ng-if="!users.name" href="#!contact">Đăng kí</a>
+                            <a class="nav-link" ng-if="!users.name"
+                                href="#!register">Đăng kí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./cart.html"><i class='bx bxs-cart fs-3'></i></a>
+                            <a class="nav-link" href="#!cart"><i
+                                    class='bx bxs-cart fs-3'></i></a>
                         </li>
                     </ul>
                 </div>
@@ -62,16 +68,17 @@
         </nav>
 
         <div class="ng-view">
-            
+
         </div>
 
-        <div class="footer w-100 py-5 mt-5 bg-dark">
+        <div class="footer w-100 z-3 py-5 mt-5 bg-dark">
             <div class="container">
                 <div class="row">
                     <div
                         class="col-lg-4 col-md-6 col-sm-12 text-white footer-content">
                         <a class="navbar-brand" href="#"><img
-                                src="./public/img/imgPrivate/logo.png" width="50px"
+                                src="./public/img/imgPrivate/logo.png"
+                                width="50px"
                                 alt></a>
                         <h4 class="fw-bold text-white mt-2">Phạm An Travel</h4>
                         <p class="text-secondary">Điện thoại: 0927553664</p>
@@ -114,7 +121,8 @@
                 <span class="d-flex justify-content-center text-white pt-5">©
                     create by Phạm Ngọc Bảo An</span>
             </div>
-        </div> 
+        </div>
+
         <script src="./public/js/bootstrap.bundle.min.js"></script>
         <script src="./public/js/angular-1.8.2/angular.min.js"></script>
         <script src="./public/js/angular-route.min.js"></script>
@@ -124,5 +132,9 @@
         <script src="./controllers/detailCtrl.js"></script>
         <script src="./controllers/productCtrl.js"></script>
         <script src="./controllers/loginCtrl.js"></script>
+        <script src="./controllers/registerCtrl.js"></script>
+        <script src="./controllers/cartCtrl.js"></script>
+        <script src="./controllers/adminCtrl.js"></script>
+        <script src="./controllers/orderCtrl.js"></script>
     </body>
 </html>
