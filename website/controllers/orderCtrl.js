@@ -1,4 +1,4 @@
-app.controller("orderCtrl", function ($scope, $rootScope, $http, $location) {
+app.controller("orderCtrl", function ($scope, $rootScope, $http, $location, $routeParams) {
   $scope.tatcatinh = [];
   $scope.tinh = null;
   $scope.huyen = null;
@@ -19,6 +19,7 @@ app.controller("orderCtrl", function ($scope, $rootScope, $http, $location) {
   $scope.actionOrder = function () {
     $http
       .post(`http://localhost:3000/orders`, {
+        idUser: $rootScope.users.id,
         name: $scope.users.name,
         phone: $scope.users.phone,
         address1: $scope.users.address,
@@ -27,7 +28,6 @@ app.controller("orderCtrl", function ($scope, $rootScope, $http, $location) {
           district: $scope.huyen ? $scope.huyen.Name : null,
           ward: $scope.xa ? $scope.xa.Name : null,
         },
-        idUser: $scope.users.id,
         product: $rootScope.cart,
         total: $rootScope.tinhtong(),
         status: 'Chờ xác nhận',
@@ -35,11 +35,23 @@ app.controller("orderCtrl", function ($scope, $rootScope, $http, $location) {
       })
       .then(function (response) {
         $rootScope.cart = [];
-        localStorage.removeItem("cart");  
+        localStorage.removeItem("cart");
+        alert('Chúc mừng bạn đã đặt hàng thành công') 
         $location.path('/');
       })
       .catch(function (error) {
         // Xử lý lỗi nếu có
       });
   };
+
+  $rootScope.lichsumuahang = [];
+  $rootScope.loadHistory = function () {
+    $http.get(`http://localhost:3000/orders/?idUser=${$rootScope.users.id}`).then(
+      function (res) {
+        $rootScope.lichsumuahang = res.data;
+      },
+      function (res) {}
+    );
+  };
+  $rootScope.loadHistory();
 });

@@ -233,8 +233,8 @@
                     <div class="group-info position-sticky">
                         <h2 class="text-primary"><b>{{ detail.name }}</b></h2>
                         <p class="border bg-primary text-white py fs-2"><i
-                                class='bx bx-money text-primary mx-2'></i>Giá:
-                            <b>{{ detail.price }} đ</b></p>
+                                class='bx bx-money text-primary'></i>Giá:
+                            <b>{{ detail.price | number }} đ</b></p>
                         <p><i
                                 class='bx bx-barcode text-primary mx-2'></i>Mã:
                             <b>TNA12364-29032024-SD</b></p>
@@ -253,7 +253,7 @@
                                 class='bx bxs-plane text-primary mx-2'></i>Phương
                             tiện: <b>{{ detail.transport }}</b></p>
                             <button ng-show="users.name" class="btn btn-primary mt-2" ng-click="buyNow(detail)" style="transform: translateX(18px);">
-                                Thêm vào giỏ
+                                Mua ngay    
                             </button>
                             <span ng-show="!users.name"><a href="#!login">Đăng nhập để mua ngay bạn nhé</a></span>
                     </div>

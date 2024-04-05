@@ -35,6 +35,10 @@ app.config(function($routeProvider) {
         templateUrl: 'views/order.html',
         controller: 'orderCtrl',
     })
+    .when('/orderHistory', {
+        templateUrl: 'views/orderHistory.html',
+        controller: 'orderCtrl',
+    })
     .otherwise({
         template : "404 không tìm thấy file"
     });

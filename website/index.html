@@ -50,9 +50,25 @@
                         <li class="nav-item nav-item-primary">
                             <a class="nav-link" ng-if="!users.name"
                                 href="#!login">Đăng nhập</a>
-                            <a class="nav-link" href ng-if="users.name"
-                                ng-click="logout()">Hi {{ users.name }} đăng
-                                xuất</a>
+                            <a class="nav-link" href ng-if="users.name">Hi {{ users.name }}</a>
+                            <li ng-if="users.name" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="#!orderHistory">Lịch sử mua hàng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" ng-click="logout()"
+                                            href="">Đăng xuất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" ng-if="!users.name"
