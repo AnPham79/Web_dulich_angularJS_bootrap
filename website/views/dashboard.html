@@ -1,0 +1,124 @@
+<div class="row w-100">
+    <div class="col-lg-3">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 100%; height: 100vh;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">The Travel</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        Quản lí đơn hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Quản lí sản phẩm
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Quản lí bình luận
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Quản lí tin tức
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        Quản lí tài khoản
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./public/img/imgPrivate/avt.jpg" alt width="32" height="32" class="rounded-circle me-2">
+                    <strong>Admin</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                    <li><a class="dropdown-item" ng-click="waybackhome()" href="#">Trang chủ</a></li>
+                    <li><a class="dropdown-item" ng-click="logout()" href>Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="col-lg-9 col-md-8 col-sm-12 p-2 w-100">
+            <div class="content">
+                <h2>Quản lí đơn hàng</h2>
+                <table class="table table-bordered mt-4">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên KH</th>
+                            <th>Số điện thoại</th>
+                            <th>Chi tiết</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày mua</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="order in lichsumuahang">
+                            <td>{{ order.id }}</td>
+                            <td>{{ order.name }}</td>
+                            <td>{{ order.phone }}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal{{ $index }}">
+                                    Chi tiết đơn
+                                </button>
+                                <div class="modal fade" id="orderModal{{ $index }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Chi tiết đơn hàng</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{ order.address1 }}, {{ order.address2.province }}, {{ order.address2.district }}, {{ order.address2.ward }}
+                                                <h6 class="mt-3">Sản phẩm:</h6>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item" ng-repeat="product in order.product">
+                                                        <div class="row">
+                                                            <div class="col-md-4"></div>
+                                                            <div class="col-md-8">
+                                                                <h6>{{ product.name }}</h6>
+                                                                <p>Giá: {{ product.price | number }} VND</p>
+                                                                <p>Số lượng: {{ product.quantity }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{ order.total }}</td>
+                            <td>
+                                <select ng-model="order.status" ng-change="updateStatus(order)">
+                                    <option value="Chờ xác nhận">Chờ xác nhận</option>
+                                    <option value="Đã xác nhận">Đã xác nhận</option>
+                                    <option value="Đang giao hàng">Đang giao hàng</option>
+                                    <option value="Đã giao hàng">Đã giao hàng</option>
+                                    <option value="Đã hủy">Đã hủy</option>
+                                </select>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td>
+                                <button class="btn btn-primary" ng-click="updateOrder(order)">Cập nhật</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

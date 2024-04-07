@@ -47,6 +47,7 @@
                                  ng-model="password" required>
                                 <div class="input-group-append">
                                     <button
+                                        ng-click="showpassword()"
                                         class="btn btn-outline-secondary"
                                         type="button" id="togglePassword">
                                         hiện
@@ -93,18 +94,4 @@
     </div>
     <script
         src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const togglePassword = document.getElementById('togglePassword');
-        const password = document.getElementById('password');
-
-        togglePassword.addEventListener('click', function() {
-            if (password.type === 'password') {
-                password.type = 'text';
-                togglePassword.textContent = 'Ẩn';
-            } else {
-                password.type = 'password';
-                togglePassword.textContent = 'Hiện';
-            }
-        });
-    </script>
 </body>

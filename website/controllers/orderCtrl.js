@@ -54,4 +54,17 @@ app.controller("orderCtrl", function ($scope, $rootScope, $http, $location, $rou
     );
   };
   $rootScope.loadHistory();
+
+  $rootScope.changeStatus = function (orderId) {
+    $http.patch(`http://localhost:3000/orders/${orderId}`, {
+      status: 'Đã hủy',
+    }).then(
+      function (res) {
+        alert('Hủy thành công');
+      },
+      function (res) {
+        alert('Đã xảy ra lỗi khi hủy đơn hàng');
+      }
+    );
+  };  
 });

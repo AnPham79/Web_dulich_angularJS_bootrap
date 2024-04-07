@@ -79,4 +79,8 @@ app.controller("homeCtrl", function ($scope, $http, $rootScope) {
       $scope.danhsachtourhot.sort((a, b) => b.price - a.price);
     }
   };
+
+  $rootScope.waybackadmin = function () {
+    window.location.href = 'http://127.0.0.1:5501/website/admin.html#!/';
+  };
 });

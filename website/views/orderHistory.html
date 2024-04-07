@@ -1,5 +1,6 @@
 <div class="container mt-5">
     <h1 class="mb-4">Lịch sử mua hàng</h1>
+    <i style="color: gray;">Đây là những đơn hàng mà bạn đã đặt, nếu không có thì mua <a href="#!product">tại đây</a></i>
     <div class="row">
         <div class="col-md-6" ng-repeat="order in lichsumuahang">
             <div class="card mb-3">
@@ -9,7 +10,7 @@
                     <p class="card-text">Địa chỉ: {{ order.address1 }}, {{ order.address2.province }}, {{ order.address2.district }}, {{ order.address2.ward }}</p>
                     <p class="card-text">Tổng tiền: {{ order.total | number }} VND</p>
                     <p class="card-text">Trạng thái: {{ order.status }} 
-                        <button ng-show="order.status === 'Chờ xác nhận'" ng-click="changeStatus()" class="btn btn-danger">Hủy vé</button>
+                        <button ng-show="order.status === 'Chờ xác nhận'" ng-click="changeStatus(order.id)" class="btn btn-danger">Hủy vé</button>
                     </p>
                     <p class="card-text">Ngày đặt hàng: {{ order.date }}</p>
                     <h6 class="mt-3">Sản phẩm:</h6>

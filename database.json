@@ -385,6 +385,30 @@
       "idNews": "3",
       "content": "như db",
       "date": "2024-04-04 13:44:28"
+    },
+    {
+      "id": "0916",
+      "idNews": "6",
+      "content": "đc",
+      "name": "An Phạm",
+      "idUser": "2858",
+      "date": "2024-04-06 16:22:08"
+    },
+    {
+      "id": "297d",
+      "idNews": "5",
+      "content": "tour tốt",
+      "name": "An Phạm",
+      "idUser": "2858",
+      "date": "2024-04-06 16:47:59"
+    },
+    {
+      "id": "2388",
+      "idNews": "5",
+      "content": "ưdasdasdasd",
+      "name": "An Phạm",
+      "idUser": "2858",
+      "date": "2024-04-06 16:48:09"
     }
   ],
   "users": [
@@ -396,9 +420,212 @@
       "phone": "0927553664",
       "address": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
       "role": 1
+    },
+    {
+      "id": "ba4d",
+      "name": "Thiên",
+      "email": "thiennt68@gmail.com",
+      "password": "12345678",
+      "phone": "0927553664",
+      "address": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "role": 1
+    },
+    {
+      "id": "5358",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "role": 2
     }
   ],
   "orders": [
-    
+    {
+      "id": "8374",
+      "idUser": "2858",
+      "name": "An Phạm",
+      "phone": "0927553664",
+      "address1": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "address2": {
+        "province": "Tỉnh Thái Nguyên",
+        "district": "Huyện Định Hóa",
+        "ward": "Xã Bảo Cường"
+      },
+      "product": [
+        {
+          "id": "5",
+          "name": "Phan Thiết",
+          "hot": 0,
+          "kind": "trong nước",
+          "image": "phanthiet",
+          "thumbnail": [
+            "phanthiet1",
+            "phanthiet2",
+            "phanthiet3"
+          ],
+          "price": 3900000,
+          "sale": 2900000,
+          "duration": "4 ngày 3 đêm",
+          "transport": 6.5,
+          "hotel": 4,
+          "start": "02/09/2023",
+          "content": "Gần cuối thế kỷ 19, Phan Thiết vẫn chưa được công nhận chính thức là một đơn vị hành chính (cấp dưới) trực thuộc tỉnh Bình Thuận. Năm 1898 (năm Thành Thái thứ muời), tỉnh lỵ Bình Thuận được dời về đặt tại làng Phú Tài ở ngoại vi Phan Thiết. Ngày 20 tháng 10 cùng năm, vua Thành Thái ra đạo dụ xác lập thị xã (centre urban) Phan Thiết, tỉnh lỵ của Bình Thuận (cùng ngày thành lập các thị xã Huế, Hội An, Quy Nhơn, Thanh Hoá, Vinh). Năm 1905, thị xã Phan Thiết cũng vẫn chưa xác định rõ ranh giới. Tòa sứ Bình Thuận (bộ máy thống trị của Pháp) do một công sứ (résident) đứng đầu đặt thường trực tại Phan Thiết. Ngày 4 tháng 11 năm 1910, viên toàn quyền Đông Dương A.Klobukowski ra quyết định về Phan Thiết. Lúc này Phan Thiết chính thức bao gồm 16 làng xã. Bên hữu ngạn sông: Đức Thắng, Thành Đức, Nhuận Đức, Nam Nghĩa, Lạc Đạo, Tú Long; bên tả ngạn sông: Long Khê, Phú Trinh, Trinh Tường, Đảng Bình, Quảng Bình, Thiện Mỹ, Thiện Chánh, Xuân Hoà, An Hải, Sơn Thủy (năm làng sau trước đây là thuộc khu vực Phố Hài). Có thêm địa danh mới như Nam Nghĩa, Quảng Bình (dân Quảng Nam, Quảng Nghĩa, Quảng Bình di cư vào Phan Thiết). Ngày 6 tháng 1 năm 1918, Khâm Sứ Trung Kỳ Charles quyết định Phú Hài (tên gọi mới của Phố Hài) tách ra khỏi Phan Thiết để nhập về lại tổng Lại An của huyện Hàm Thuận. Pháp bắt đầu thiết lập bộ máy chính quyền ở Phan Thiết. Thị xã Phan Thiết liên tục làm tỉnh lỵ của tỉnh Bình Thuận từ đó.",
+          "quantity": 2
+        },
+        {
+          "id": "3",
+          "name": "Nha Trang",
+          "hot": 0,
+          "kind": "trong nước",
+          "image": "nhatrang",
+          "thumbnail": [
+            "nhatrang1",
+            "nhatrang2",
+            "nhatrang3"
+          ],
+          "price": 5900000,
+          "sale": 4900000,
+          "duration": "4 ngày 3 đêm",
+          "transport": "thuyền",
+          "hotel": 4,
+          "start": "01/09/2023",
+          "content": "Từ năm 1653 đến giữa thế kỷ XIX, Nha Trang vẫn là một vùng đất còn hoang vu và nhiều thú dữ thuộc Hà Bạc, huyện Vĩnh Xương, phủ Diên Khánh. Chỉ qua hai thập niên đầu thế kỷ XX, bộ mặt Nha Trang đã thay đổi nhanh chóng. Với Nghị định ngày 30 tháng 8 năm 1924 của Toàn quyền Đông Dương, Nha Trang trở thành một thị trấn (centre urbain)[6]. Thị trấn Nha Trang hình thành từ các làng cổ: Xương Huân, Phương Câu, Vạn Thạnh, Phương Sài, Phước Hải. Thời Pháp thuộc, Nha Trang được coi là tỉnh lỵ (chef lieu) của tỉnh Khánh Hòa. Các cơ quan chuyên môn của chính quyền thuộc địa như Tòa Công sứ, Giám binh, Nha Thương chánh, Bưu điện... đều đặt tại Nha Trang. Tuy nhiên, các cơ quan Nam triều như dinh quan Tuần vũ, Án sát (coi về hành chánh, tư pháp), Lãnh binh (coi việc trật tự trị an) vẫn đóng ở Thành Diên Khánh (cách Nha Trang 10 km về phía Tây Nam).",
+          "quantity": 2
+        }
+      ],
+      "total": 19600000,
+      "status": "Đã hủy",
+      "date": "2024-04-06 12:10:12"
+    },
+    {
+      "id": "6889",
+      "idUser": "2858",
+      "name": "An Phạm",
+      "phone": "0927553664",
+      "address1": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "address2": {
+        "province": "Tỉnh Bắc Ninh",
+        "district": "Huyện Quế Võ",
+        "ward": "Xã Cách Bi"
+      },
+      "product": [
+        {
+          "id": "9",
+          "name": "Campuchia",
+          "hot": 0,
+          "kind": "quốc tế",
+          "image": "campuchia",
+          "thumbnail": [
+            "campuchia1",
+            "campuchia2",
+            "campuchia3"
+          ],
+          "price": 5900000,
+          "sale": 4900000,
+          "duration": "4 ngày 3 đêm",
+          "transport": "máy bay",
+          "hotel": 4,
+          "start": "02/09/2023",
+          "content": "Năm 802 sau Công nguyên, Jayavarman II tự xưng là vua, thống nhất các hoàng tử Khmer đang tham chiến ở Chân Lạp với tên gọi Kambuja.[11] Jayavarman II đã tuyên bố độc lập khỏi Java ở vùng núi Kulen. Điều này đánh dấu sự khởi đầu của Đế chế Khmer, phát triển mạnh mẽ trong hơn 600 năm, cho phép các vị vua kế tiếp kiểm soát và gây ảnh hưởng trên phần lớn Đông Nam Á, đồng thời tích lũy quyền lực và tài sản khổng lồ. Vương quốc Ấn Độ Dương đã tạo điều kiện cho việc truyền bá Ấn Độ giáo đầu tiên và sau đó là Phật giáo đến phần lớn Đông Nam Á và thực hiện nhiều dự án cơ sở hạ tầng tôn giáo khắp khu vực, bao gồm việc xây dựng hơn 1.000 ngôi đền và di tích chỉ riêng ở Angkor. Angkor Wat là công trình nổi tiếng nhất trong số những công trình kiến trúc này và được công nhận là Di sản Thế giới.",
+          "quantity": 3
+        }
+      ],
+      "total": 17700000,
+      "status": "Đang giao hàng",
+      "date": "2024-04-06 14:30:35"
+    },
+    {
+      "id": "6bd2",
+      "idUser": "2858",
+      "name": "An Phạm",
+      "phone": "0927553664",
+      "address1": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "address2": {
+        "province": "Tỉnh Tuyên Quang",
+        "district": "Huyện Chiêm Hóa",
+        "ward": "Xã Hòa Phú"
+      },
+      "product": [
+        {
+          "id": "5",
+          "name": "Phan Thiết",
+          "hot": 0,
+          "kind": "trong nước",
+          "image": "phanthiet",
+          "thumbnail": [
+            "phanthiet1",
+            "phanthiet2",
+            "phanthiet3"
+          ],
+          "price": 3900000,
+          "sale": 2900000,
+          "duration": "4 ngày 3 đêm",
+          "transport": 6.5,
+          "hotel": 4,
+          "start": "02/09/2023",
+          "content": "Gần cuối thế kỷ 19, Phan Thiết vẫn chưa được công nhận chính thức là một đơn vị hành chính (cấp dưới) trực thuộc tỉnh Bình Thuận. Năm 1898 (năm Thành Thái thứ muời), tỉnh lỵ Bình Thuận được dời về đặt tại làng Phú Tài ở ngoại vi Phan Thiết. Ngày 20 tháng 10 cùng năm, vua Thành Thái ra đạo dụ xác lập thị xã (centre urban) Phan Thiết, tỉnh lỵ của Bình Thuận (cùng ngày thành lập các thị xã Huế, Hội An, Quy Nhơn, Thanh Hoá, Vinh). Năm 1905, thị xã Phan Thiết cũng vẫn chưa xác định rõ ranh giới. Tòa sứ Bình Thuận (bộ máy thống trị của Pháp) do một công sứ (résident) đứng đầu đặt thường trực tại Phan Thiết. Ngày 4 tháng 11 năm 1910, viên toàn quyền Đông Dương A.Klobukowski ra quyết định về Phan Thiết. Lúc này Phan Thiết chính thức bao gồm 16 làng xã. Bên hữu ngạn sông: Đức Thắng, Thành Đức, Nhuận Đức, Nam Nghĩa, Lạc Đạo, Tú Long; bên tả ngạn sông: Long Khê, Phú Trinh, Trinh Tường, Đảng Bình, Quảng Bình, Thiện Mỹ, Thiện Chánh, Xuân Hoà, An Hải, Sơn Thủy (năm làng sau trước đây là thuộc khu vực Phố Hài). Có thêm địa danh mới như Nam Nghĩa, Quảng Bình (dân Quảng Nam, Quảng Nghĩa, Quảng Bình di cư vào Phan Thiết). Ngày 6 tháng 1 năm 1918, Khâm Sứ Trung Kỳ Charles quyết định Phú Hài (tên gọi mới của Phố Hài) tách ra khỏi Phan Thiết để nhập về lại tổng Lại An của huyện Hàm Thuận. Pháp bắt đầu thiết lập bộ máy chính quyền ở Phan Thiết. Thị xã Phan Thiết liên tục làm tỉnh lỵ của tỉnh Bình Thuận từ đó.",
+          "quantity": 3
+        }
+      ],
+      "total": 11700000,
+      "status": "Đã xác nhận",
+      "date": "2024-04-06 15:27:58"
+    },
+    {
+      "id": "1516",
+      "idUser": "2858",
+      "name": "An Phạm",
+      "phone": "0927553664",
+      "address1": "khu phố 1, phường Tân Chánh Hiệp, quận 12, thành phố Hồ Chí Minh",
+      "address2": {
+        "province": "Thành phố Hà Nội",
+        "district": "Quận Hoàn Kiếm",
+        "ward": "Phường Hàng Đào"
+      },
+      "product": [
+        {
+          "id": "13",
+          "name": "Malaysia",
+          "hot": 0,
+          "kind": "quốc tế",
+          "image": "malaysia",
+          "thumbnail": [
+            "malaysia1",
+            "malaysia2",
+            "malaysia3"
+          ],
+          "price": 8900000,
+          "sale": 7900000,
+          "duration": "4 ngày 3 đêm",
+          "transport": "máy bay",
+          "hotel": 3,
+          "start": "02/09/2023",
+          "content": "Sau khi giành được độc lập, Malaysia đã trở thành một trong những nước có nền kinh tế phát triển nhanh và bền vững nhất tại châu Á, GDP tăng trưởng liên tục, trung bình ở mức 6,5% trong gần 50 năm liên tiếp, chỉ số phát triển con người (HDI) đạt mức rất cao. Về truyền thống, yếu tố thúc đẩy cho kinh tế Malaysia là các nguồn tài nguyên thiên nhiên, song, quốc gia này hiện cũng đang rất phát triển trong các lĩnh vực công nghiệp nặng, khoa học ứng dụng, du lịch, thương mại và y tế. Ngày nay, Malaysia có một nền kinh tế thị trường công nghiệp mới tiệm cận mức phát triển, duy trì, giữ vững quy mô GDP danh nghĩa lớn thứ 3 trong khu vực Đông Nam Á sau Thái Lan và Indonesia qua nhiều năm. Malaysia là thành viên của Hiệp hội các quốc gia Đông Nam Á, Hội nghị cấp cao ASEAN - Đông Á, Tổ chức Hợp tác Hồi giáo, Liên Hợp Quốc, WTO, Diễn đàn Hợp tác Kinh tế châu Á - Thái Bình Dương, Khối Thịnh vượng chung các quốc gia và Phong trào không liên kết.",
+          "quantity": 2
+        },
+        {
+          "id": "8",
+          "name": "Đà Lạt",
+          "hot": 0,
+          "kind": "trong nước",
+          "image": "dalat",
+          "thumbnail": [
+            "dalat1",
+            "dalat2",
+            "dalat3"
+          ],
+          "price": 3900000,
+          "sale": 3200000,
+          "duration": "5 ngày 4 đêm",
+          "transport": "máy bay",
+          "hotel": 3,
+          "start": "02/09/2023",
+          "content": "Đà Lạt là thành phố tỉnh lỵ trực thuộc tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, thuộc vùng Tây Nguyên, Việt Nam. Từ xa xưa, vùng đất này vốn là địa bàn cư trú của những cư dân người Lạch, người Chil và người Srê thuộc dân tộc Cơ Ho. Cuối thế kỷ 19, khi tìm kiếm một địa điểm để xây dựng trạm nghỉ dưỡng dành cho người Pháp ở Đông Dương, Toàn quyền Paul Doumer đã quyết định chọn cao nguyên Lâm Viên theo đề nghị của bác sĩ Alexandre Yersin, người từng thám hiểm tới nơi đây vào năm 1893. Trong nửa đầu thế kỷ 20, từ một địa điểm hoang vu, người Pháp đã quy hoạch và xây dựng lên một thành phố xinh đẹp với những biệt thự, công sở, khách sạn và trường học, một trung tâm du lịch và giáo dục của Đông Dương khi đó. Trải qua những khoảng thời gian thăng trầm của hai cuộc chiến tranh cùng giai đoạn khó khăn những thập niên 1970–1980, Đà Lạt ngày nay là một thành phố khá đông dân, đô thị loại I trực thuộc tỉnh, giữ vai trò trung tâm chính trị, kinh tế và văn hóa quan trọng của tỉnh Lâm Đồng và vùng Tây Nguyên, hướng đến là thành phố trực thuộc Trung ương vào năm 2030.",
+          "quantity": 2
+        }
+      ],
+      "total": 25600000,
+      "status": "Đã hủy",
+      "date": "2024-04-06 16:46:37"
+    }
   ]
 }

@@ -1,29 +1,45 @@
 <div class="container">
     <h4 class="mt-2 text-warning text-center">Thông tin khách hàng</h4>
-    <form action="/submit_booking_info" method="post">
+    <form action="/submit_booking_info" name="formCheck">
         <div class="mb-3">
             <label for="fullname" class="form-label">Họ và tên</label>
             <input ng-model="users.name" type="text" class="form-control"
                 id="fullname" name="fullname" placeholder="Nhập họ và tên"
                 required>
+            <span class="text-danger"
+                ng-show="formCheck.fullname.$invalid && formCheck.fullname.$touched">
+                Bạn chưa nhập Họ tên
+            </span>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input ng-model="users.email" type="email" class="form-control"
                 id="email" name="email" placeholder="Nhập địa chỉ email"
                 required>
+                <span class="text-danger"
+                ng-show="formCheck.email.$invalid && formCheck.email.$touched">
+                Bạn chưa nhập email
+            </span>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Số điện thoại</label>
             <input ng-model="users.phone" type="tel" class="form-control"
                 id="phone" name="phone" placeholder="Nhập số điện thoại"
                 required>
+                <span class="text-danger"
+                ng-show="formCheck.phone.$invalid && formCheck.phone.$touched">
+                bạn chưa nhập số điện thoại
+            </span>
         </div>
         <div class="mb-3">
             <label for="address" class="form-label">Địa chỉ</label>
             <input ng-model="users.address" type="text" class="form-control"
                 id="address" name="address" placeholder="Nhập địa chỉ của bạn"
                 required>
+                <span class="text-danger"
+                ng-show="formCheck.address.$invalid && formCheck.address.$touched">
+                bạn chưa nhập số điện thoại
+            </span>
         </div>
         <div class="mb-3">
             <label for="province" class="form-label">Tỉnh/Thành phố</label>
@@ -32,21 +48,34 @@
                 <option value disabled selected> -- Chọn Tỉnh/Thành phố
                     --</option>
             </select>
+            <span class="text-danger"
+                ng-show="formCheck.tinh.$invalid && formCheck.tinh.$touched">
+                bạn chưa chọn Tỉnh/Thành phố
+            </span>
         </div>
         <div class="mb-3">
             <label for="district" class="form-label">Quận/Huyện</label>
             <select class="form-select" id="district" name="district"
                 ng-options="huyen.Name for huyen in tinh.Districts"
-                ng-model="huyen">
+                ng-model="huyen" required>
                 <option value disabled selected> -- Chọn Quận/Huyện --</option>
             </select>
+            <span class="text-danger"
+                ng-show="formCheck.district.$invalid && formCheck.district.$touched">
+                bạn chưa chọn Quận/Huyện 
+            </span>
         </div>
         <div class="mb-3">
             <label for="ward" class="form-label">Phường/Xã</label>
             <select class="form-select" id="ward" name="ward"
-                ng-options="xa.Name for xa in huyen.Wards" ng-model="xa">
+                ng-options="xa.Name for xa in huyen.Wards" ng-model="xa"
+                required>
                 <option value disabled selected> -- Chọn Phường/Xã --</option>
             </select>
+            <span class="text-danger"
+                ng-show="formCheck.ward.$invalid && formCheck.ward.$touched">
+                bạn chưa chọn Phường/Xã
+            </span>
         </div>
     </form>
 </div>
@@ -69,7 +98,9 @@
                 <tbody>
                     <tr ng-repeat="item in cart">
                         <td>{{$index+1}}</td>
-                        <td><img class="w-50" src="./public/img/imgPrd/{{ item.image }}.jpeg" alt=""></td>
+                        <td><img class="w-50"
+                                src="./public/img/imgPrd/{{ item.image }}.jpeg"
+                                alt></td>
                         <td>{{ item.name }}</td>
                         <td><input type="number" style="width: 70px;"
                                 class="form-control" ng-model="item.quantity"
@@ -83,5 +114,6 @@
     <div class="my-5 total-price-order">
         <h1>Tổng tiền: {{ tinhtong() | number }}</h1>
     </div>
-    <button type="submit" class="btn btn-primary" ng-click="actionOrder()">Xác nhận đặt vé</button>
+    <button type="submit" class="btn btn-primary" ng-click="actionOrder()">Xác
+        nhận đặt vé</button>
 </div>
